@@ -18,7 +18,7 @@ function BajaMonotributoForm() {
   const [loading, setLoading] = useState(false);
 
   // 🔹 Precio del trámite
-  const precioTramite = 15.000;
+  const precioTramite = 15000;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
