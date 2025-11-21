@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #083B73;
+}
+
+.navbar .nav-link:hover {
+  color: #4c6fbf !important;    /* cambia el texto a blanco */
+  border-radius: 5px;        /* opcional: bordes redondeados */
+}
+.navbar .nav-link {
+  color: white !important;
+}
+.navbar-logo{
+  height: 40px;      /* altura fija para que el navbar no crezca */
+  width: 120px;      /* ancho más largo */
+  object-fit: contain; 
+}

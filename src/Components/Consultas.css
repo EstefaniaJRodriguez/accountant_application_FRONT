@@ -1,0 +1,7 @@
+.button {
+  background-color: #083B73;
+  border: #083B73;
+}
+.button:hover {
+  background-color: #4c6fbf; /* azul más oscuro cuando pasás el mouse */
+}

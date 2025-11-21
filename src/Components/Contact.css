@@ -1,0 +1,19 @@
+.contact-section {
+  background-color: #f5f5f5; /* el gris que estás usando */
+  min-height: calc(100vh - 200px); /* ocupa casi toda la pantalla, ajustá si hace falta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.contact-section h5 {
+  font-weight: bold;
+  margin-top: 1px;
+}
+
+.contact-section p {
+  margin: 0;
+}
+

@@ -1,0 +1,24 @@
+.process-card {
+  width: 100%; /* o el ancho que quieras */
+}
+
+.process-img {
+  width: 100px; /* ancho de la imagen */
+  height: auto; /* mantiene proporción */
+}
+
+.process-text {
+  flex: 1; /* ocupa el resto del espacio */
+}
+.small-img {
+  max-width: 120px; /* más chica */
+  height: auto;
+}
+
+.process-section {
+  background-color: #f0f0f0; /* gris claro */
+  padding: 50px 0;          /* espacio arriba y abajo */
+}
+h4{
+  color:454545
+}

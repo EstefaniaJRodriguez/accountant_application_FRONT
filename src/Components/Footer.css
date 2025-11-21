@@ -1,0 +1,36 @@
+.footer{
+    padding: 30px 40px;   
+}
+.one-line {
+  white-space: nowrap; /* evita saltos de línea */
+  overflow: hidden;    /* opcional: oculta si se pasa del ancho */
+  text-overflow: ellipsis; /* agrega ... si se corta */
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column; /* uno abajo del otro */
+}
+p{
+    color: aliceblue;
+}
+.footer-container p {
+  color: aliceblue;
+}
+
+.footer-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-wrapper p {
+  margin: 0.3rem 0;
+  color: aliceblue;
+}
+footer, .navbar[data-bs-theme="dark"] {
+  margin-top: 0 !important;
+}
