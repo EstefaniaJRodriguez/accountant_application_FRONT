@@ -25,7 +25,7 @@ const PagoExitoso = () => {
 
   const guardarPago = async () => {
     try {
-      const res = await fetch("https://e77a3d812a5f.ngrok-free.app/api/pagos", {
+      const res = await fetch(`${API_URL}/api/pagos`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
