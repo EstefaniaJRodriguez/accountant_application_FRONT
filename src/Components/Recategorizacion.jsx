@@ -25,7 +25,7 @@ const RecategorizacionMonotributoForm = () => {
   const [mensajeMonotributo, setMensajeMonotributo] = useState("");
 
   // 🔹 Precios
-  const precioTramite = 10000;
+  const precioTramite = 15.000;
   const [precioGestionExtra, setPrecioGestionExtra] = useState(0);
   const total = precioTramite + precioGestionExtra;
 

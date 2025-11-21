@@ -28,7 +28,7 @@ function AltaMonotributoForm() {
   });
 
   const [sinCuit, setSinCuit] = useState(false);
-  const precioTramite = 10000;
+  const precioTramite = 15.000;
   const [precioGestionExtra, setPrecioGestionExtra] = useState(0);
   const [valorMonotributo, setValorMonotributo] = useState(null);
   const [mensajeMonotributo, setMensajeMonotributo] = useState("");
@@ -123,7 +123,7 @@ useEffect(() => {
   };
 
   // Calcular total mostrado al usuario
-  const total = precioTramite + (sinCuit ? 2000 : 0);
+  const total = precioTramite + (sinCuit ? 10.000 : 0);
 
   return (
     <section className="py-5 bg-light">
@@ -172,7 +172,7 @@ useEffect(() => {
               checked={sinCuit}
               onChange={(e) => {
                 setSinCuit(e.target.checked);
-                setPrecioGestionExtra(e.target.checked ? 2000 : 0);
+                setPrecioGestionExtra(e.target.checked ? 10.000 : 0);
                 if (e.target.checked) {
                   handleChange({ target: { name: "cuit", value: "" } });
                 }

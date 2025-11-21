@@ -13,12 +13,13 @@ function Contact() {
           <Col md={4} className="mb-4">
             <FaEnvelope size={30} className="mb-2 text-primary" />
             <h5>Email</h5>
-            <p>softercompany@gmail.com</p>
+            <p>gen.impositivo@gmail.com
+            </p>
           </Col>
           <Col md={4} className="mb-4">
             <FaPhoneAlt size={30} className="mb-2 text-success" />
             <h5>Teléfono</h5>
-            <p>+54 9 11 1234 5678</p>
+            <p>+54 351 8582855</p>
           </Col>
           <Col md={4} className="mb-4">
             <FaMapMarkerAlt size={30} className="mb-2 text-danger" />
