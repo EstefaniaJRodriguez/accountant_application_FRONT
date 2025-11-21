@@ -6,7 +6,7 @@ import axios from "axios";
 import "./Card.css";
 import { Link } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap"; 
 
 function AltaMonotributoForm() {
   const [formData, setFormData] = useState({
