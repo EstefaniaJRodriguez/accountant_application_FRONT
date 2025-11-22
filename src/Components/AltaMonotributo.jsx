@@ -41,7 +41,7 @@ function AltaMonotributoForm() {
 useEffect(() => {
   const fetchCategorias = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/monotributo/categorias`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/monotributo/categorias`);
       setCategorias(response.data);
     } catch (error) {
       console.error("Error al obtener categorías:", error);
