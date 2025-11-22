@@ -25,7 +25,7 @@ const SolicitudesGrid = () => {
       if (debouncedCuit) params.append("cuit", debouncedCuit);
       if (debouncedEmail) params.append("email", debouncedEmail);
 
-      const res = await fetch(`${API_URL}/api/admin?${params.toString()}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin?${params.toString()}`);
       const data = await res.json();
 
       if (Array.isArray(data)) {
@@ -43,7 +43,7 @@ const SolicitudesGrid = () => {
   useEffect(() => {
     const fetchEstados = async () => {
       try {
-        const res = await fetch(`${API_URL}/api/admin/estados`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/estados`);
         const data = await res.json();
         setEstados(data);
       } catch (error) {
@@ -53,7 +53,7 @@ const SolicitudesGrid = () => {
 
     const fetchTiposTramite = async () => {
       try {
-        const res = await fetch(`${API_URL}/api/admin/tipos-tramite`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/tipos-tramite`);
         const data = await res.json();
         setTiposTramite(data);
       } catch (error) {
@@ -97,7 +97,7 @@ const SolicitudesGrid = () => {
   if (!solicitudSeleccionada) return;
 
   try {
-    await fetch(`${API_URL}/api/admin/${solicitudSeleccionada.id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/admin/${solicitudSeleccionada.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ 

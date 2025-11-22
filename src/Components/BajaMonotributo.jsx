@@ -30,7 +30,7 @@ function BajaMonotributoForm() {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/baja/create_preference`,
+        `${import.meta.env.VITE_API_URL}/api/baja/create_preference`,
         formData
       );
       const preferenceId = response.data.preferenceId;

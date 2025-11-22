@@ -25,7 +25,7 @@ function Consultas() {
     setRespuesta("");
 
     try {
-      const res = await fetch("https://e77a3d812a5f.ngrok-free.app/api/consultas", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/consultas`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -33,7 +33,7 @@ const RecategorizacionMonotributoForm = () => {
   useEffect(() => {
     const fetchCategorias = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/monotributo/categorias`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/monotributo/categorias`);
         setCategorias(response.data);
       } catch (error) {
         console.error("Error al obtener categorías:", error);
@@ -58,7 +58,7 @@ const RecategorizacionMonotributoForm = () => {
 
     try {
       setLoadingValor(true);
-      const response = await axios.post(`${API_URL}/api/monotributo/validar`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/monotributo/validar`, {
         categoria: formData.categoriaDeseada,
         ingresos: Number(formData.ingresosUltimos12Meses),
         tipo: formData.servicio.toLowerCase(),
@@ -90,7 +90,7 @@ const RecategorizacionMonotributoForm = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/recatego/create_preference`,
+        `${import.meta.env.VITE_API_URL}/api/recatego/create_preference`,
         { ...formData, precioTramite, precioGestionExtra }
       );
       const preferenceId = response.data.preferenceId;

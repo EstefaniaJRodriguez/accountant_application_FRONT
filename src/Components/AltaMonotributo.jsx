@@ -68,7 +68,7 @@ useEffect(() => {
 
     try {
       setLoadingValor(true);
-      const response = await axios.post(`${API_URL}/api/monotributo/validar`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/monotributo/validar`, {
         categoria: formData.categoriaDeseada,
         ingresos: Number(formData.ingresos),
         tipo: formData.servicio.toLowerCase(), // "servicio" o "venta"
@@ -108,7 +108,7 @@ useEffect(() => {
       };
 
       const response = await axios.post(
-        `${API_URL}/api/alta/create_preference`,
+        `${import.meta.env.VITE_API_URL}/api/alta/create_preference`,
         dataToSend
       );
 
