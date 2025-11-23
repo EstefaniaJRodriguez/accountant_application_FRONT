@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import './Politicas.css'; // Usaremos un archivo CSS para mantenerlo limpio
+import './PoliticasdePrivacidad.css'; 
 
 function Politicas() {
   return (
