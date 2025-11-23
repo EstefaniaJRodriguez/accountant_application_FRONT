@@ -267,7 +267,7 @@ const RecategorizacionMonotributoForm = () => {
 
           {/* Botón */}
           <div className="text-center">
-            <Button variant="primary" type="submit" disabled={loading}>
+            <Button variant="primary" className="button" type="submit" disabled={loading}>
               Enviar formulario y pagar
             </Button>
           </div>
