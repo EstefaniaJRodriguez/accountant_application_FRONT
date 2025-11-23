@@ -1,102 +1,135 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-function Terms() {
+function TerminosYCondiciones() {
   return (
     <Container className="my-5">
-      <h2>Términos y Condiciones</h2>
-      <h3>
-        Vigencia desde 14/06/2022
-        </h3>
-      <h3>
-      CONDICIONES GENERALES DE CONTRATACIÓN
-      </h3>
-      <p>
-       CONDICIONES GENERALES DE CONTRATACIÓN
-Los presentes “Condiciones Generales de Contratación” (en adelante, “CGC”), constituyen un contrato entre una persona física (en adelante, “El Usuario” o, en plural, “Los Usuarios”) que desee acceder y/o usar el servicio brindado por “SANSTAG S.A.S, CUIT: 30-71606891-5 con domicilio en José Hernández 4813 Barrio Parque Liceo I Sección de la Ciudad de Córdoba, en la web www.monotributo.digital (en adelante la “Empresa”), en cuyo caso el Usuario estará sujeto a las siguientes condiciones generales de contratación. 
-En estas Condiciones Generales se describen todos los derechos, y obligaciones de las partes al utilizar el servicio de www.monotributo.digital.
-Es obligación del Usuario leer y aceptar las condiciones que se establecen en adelante, como así también las relacionadas a las Políticas de Privacidad - las cuales forman parte de las presentes - previo a proceder la utilización los servicios proporcionados por la Empresa. En caso de no estar de acuerdo con alguna/s de las cláusulas insertas, deberá abstenerse de la utilización de los servicios que brinde o pudiere brinda en un futuro la Empresa. La utilización del servicio implica la aceptación por parte del Usuario de las presentes CGC.-
-A todo efecto, se entiende por:
-Usuario: Persona física que desea utilizar y/o acceder a la contratación del SERVICIO. 
-Empresa: SANSTAG S.A.S. - CUIT 30716068915 - con domicilio en José Hernández 4813 Barrio Parque Liceo I Sección de la Ciudad de Córdoba.
-Sitio: www.monotributo.digital
-Servicio: Es el servicio ofrecido por la Empresa. Aquí encontrará tres Servicios  prestados por la misma. Los mismos se encuentran descriptos en la cláusula 1) de las presentes CGC.
-Política: Así se abrevia la presente “Política de Privacidad” del Sitio.
-CGC: Son las “Condiciones Generales de Contratación”, las cuales rigen toda la relación contractual establecida entre el Usuario y la Empresa.
-A.A.I.P.: Agencia de Acceso a la Información Pública - Organismo de contralor.
-D.N.P.D.P.: Dirección Nacional de Protección de Datos Personales - Organismo de contralor.
-Asimismo, se recuerda que es requisito excluyente para la contratación del SERVICIO que Ud. cuente con “Clave Fiscal Nivel 2” de la A.F.I.P. de lo contrario resulta imposible la prestación del mismo.
-1) SERVICIOS OFRECIDOS EN EL SITIO - OBJETO.
-El presente es un contrato de adhesión por el cual Ud. - el Usuario - contrata a La Empresa a los fines de que el mismo le proporcione uno de los siguientes servicios: 
-i) Arbitre los medios necesarios para lograr la inscripción ante la Administración Federal de Ingresos Públicos (AFIP) en el impuesto “Monotributo” y según la  categoría que resulte de los datos suministrados por Ud. y confirmados al momento de perfeccionar el presente contrato (Ver cláusulas 2), 4), 5) y 6). En relación al impuesto de Monotributo, La Empresa deja expresa constancia y el Usuario entiende y consiente, que la inscripción sólo se refiere a la inscripción en el Impuesto de AFIP y no en los eventuales regímenes provinciales (Ej: Ingresos Brutos) y/o municipales como así tampoco se encuentra incluido en el Servicio prestado la inscripción/dada de alta en la obra social elegida, ni tampoco incluye la presentación de declaración jurada “300/97” ante la ANSES, como tampoco el trámite para “Asignaciones Familiares”, trámites todos que deberán correr por cuenta del Usuario.
-ii) El mismo arbitre todos los medios necesarios para lograr la “baja por cese de actividad” (en adelante, “Baja del Impuesto”) del Impuesto de Monotributo (con exactamente los mismos alcances y limitaciones establecidas en la cláusula que antecede con respecto a los regímenes provinciales, municipales, de obra social, etc.) para el período, mes y año que el Usuario le indique. Asimismo, específicamente el Usuario exonera de toda responsabilidad a la Empresa en el caso de solicitud de baja del impuesto realizada por el Usuario, cuando la misma sea producto de culpa o error del mismo. Es decir, si por algún error, el Usuario indicó la baja del impuesto y La Empresa la lleva a cabo, el Usuario - jamás y bajo ninguna circunstancia - podrá reclamar por los daños y perjuicios sufridos a La Empresa, quien diligentemente cumplió con su principal prestación a cargo. La culpa propia del Usuario no podrá ser alegada como fundamento de responsabilidad La Empresa. Aún más, el Usuario entiende y consiente que la baja del impuesto, como fuera aquí descripta, no importa asesoramiento alguno, ni actividad alguna  por parte La Empresa posterior a la obtención de la baja.
-iii) El mismo arbitre todos los medios necesarios para lograr la “recategorización” (en adelante, “Recategorización en el Impuesto”) en el Impuesto de Monotributo (con exactamente los mismos alcances y limitaciones establecidas en la cláusula que antecede con respecto a los regímenes provinciales, municipales, de obra social, etc.) para el período, mes y año que el Usuario le indique. El Servicio brindado por la Empresa se limita exclusivamente a analizar los datos brindados por Afip respecto a Ingresos y Egresos, e informar al Usuario la eventual “nueva categoría” que surge de tal información. En caso de que la “nueva categoría” sugerida sea aceptada por el Usuario, la Empresa procederá a realizar el trámite de recategorización objeto del servicio.  A estos efectos, la Empresa ingresará - mediante expreso mandato y autorización del Usuario - al Sistema Registral del Usuario (Padrón Único del Contribuyente) con su clave fiscal y CUIT/L. Se pone de manifiesto que la categoría sugerida previamente por el Usuario se tomará en cuenta solo a los efectos de sugerencia. No implica una obligación para la Empresa colocarlo en esa categoría, solo se realizará en virtud de la categoría que surja de la información obrante en AFIP. Solo respecto de esta última se realizará el trámite, previo consentimiento según lo mencionado, por parte del Usuario. 
-En todos los casos, el Usuario declara comprender que para poder utilizar los Servicios ofrecidos por la Empresa, debe contar previamente con un CUIT (Clave Única de Identificación Tributaria) habilitado según la normativa correspondiente. De no ser así, y de conformidad a lo estipulado en la cláusula catorce “Plazos para el cumplimiento del Servicio”, los plazos allí estipulados no comenzarán a correr hasta tanto sea habilitada el CUIT, de conformidad a lo aquí indicado.
-2) FORMULARIO DE SOLICITUD DE TRÁMITE.
-Todo Usuario que desee utilizar el servicio proporcionado por la Empresa, debe hacerlo mediante la utilización del sitio web www.monotibuto.digital , (en adelante, el “Sitio”). Asimismo, luego de ingresar, debe consignar todos y cada uno de los datos solicitados en el mismo, según sea el tipo de servicio que el Usuario requiera, y que obviamente sea brindado por La Empresa. La Empresa no se responsabiliza por la veracidad de los datos introducidos por los Usuarios. Los Usuarios serán responsables y garantizan y responden, en cualquier caso, por la veracidad, exactitud, integridad, vigencia y autenticidad de los datos ingresados. Todos los datos proporcionados por los Usuarios revisten el carácter de declaración jurada siendo el mismo responsable por la veracidad, exactitud y vigencia de los mismos.-
- La Empresa no procederá a auditar ni a realizar acción alguna a los fines de validar, verificar, etc. los datos personales proporcionados por Ud. con ocasión de la contratación del SERVICIO. Ud. es el único responsable de ello y no podrá - jamás y bajo ninguna circunstancia - suplantar la identidad de un tercero o utilizar el servicio en perjuicio de un tercero y/o para fines que están vedados legalmente.
- La Empresa se reserva el derecho de rechazar una solicitud de trámite o de cancelarla y/o suspenderla, temporal o definitivamente, en caso de detectar incongruencias o inconsistencias en la información provista por un Usuario. Tal decisión no dará lugar a reclamo alguno de ningún tipo por parte del Usuario.-
-3) COMUNICACIONES.
-El Usuario, por medio de la presente, autoriza de forma expresa la suplantación del soporte físico/papel por el electrónico para todas y cada una de las comunicaciones que La Empresa realice o deba realizar con motivo de la contratación del Servicio. En consecuencia las comunicaciones serán dirigidas a la casilla de correo suministrada por el Usuario.
-4) FORMA Y MODALIDAD DE CONTRATACIÓN.
-Como se estableciera anteriormente, el presente es un contrato a distancia. A los fines de cumplimentar con el art. 1107 del Código Civil y Comercial, se informa mediante las presentes CGC, que a los fines de utilizar correctamente el Sitio, y en consecuencia obtener correctamente el Servicio prestado por La Empresa, se pone a su disposición en el Sitio, una sección de “Preguntas y respuestas” que encontrará en el siguiente enlace: https://monotributo.digital/preguntas-frecuentes
- 
-No obstante, al ser una contratación electrónica a distancia, se informa que la navegación del sitio es gratuita para todo aquello que no sea contratación. Es decir, hasta tanto NO SE APRIETE EL BOTÓN “Finalizar!”, previa lectura de las condiciones de contratación, la navegación es gratuita y no se generará cargo alguno. 
- El pago se genera por servicio solicitado una vez apretado el botón de “Finalizar!”. Advertimos que el principal riesgo de este tipo de contratación es aquel inherente a la contratación electrónica y a distancia. Ya que no presenta ninguna dificultad comprensiva y/o términos extraños o en otra lengua. Desde nuestra plataforma hemos desplegado un diseño de interfaz simple, sencilla de usar para todas las edades y condiciones y didáctica para evitar cualquier tipo de riesgo en el uso de la misma.
-5) PERFECCIÓN DEL CONTRATO.
-Acorde a lo estipulado por los arts. 1105 y 1106 del Código Civil y Comercial de la República Argentina, el presente constituye un contrato de los denominados “a distancia”. El mismo no se considerará perfeccionado, sino hasta haberse hecho efectivo el pago correspondiente, según lo estipulado de las cláusulas 4), 8) y 9) de las presentes CGC, habiendo previamente a ello, completado correctamente el Formulario de contratación que se encuentra en el Sitio (https://monotributo.digital) y previa LECTURA Y CONFORMIDAD a estas condiciones de contratación, las cuales le son puestas a disposición suya de manera inmediatamente previa al botón de "Finalizar!". 
-Ambas partes entienden y consienten en que, antes de la perfección del contrato conforme a lo aquí estipulado, NINGUNA obligación de prestar el servicio pesa sobre La Empresa.
-Las partes - de común acuerdo - aceptan equiparar la firma autógrafa del Usuario a la realizada mediante cualquier tipo de clave, código o elemento de seguridad identificativo utilizado y conocido sólo por El Usuario. 
-6) ACEPTACIÓN DEL CONTRATO.
-Luego de haberse perfeccionado el contrato según lo estipulado en la cláusula que antecede, y dando cumplimiento a lo estipulado por el Art. 1108 del Código Civil y Comercial de la República Argentina, La Empresa enviará un correo electrónico, a la dirección indicada por el Usuario al momento de completar el formulario de solicitud de trámite, la Aceptación de la contratación del Servicio.
- 
-7) CARÁCTER DEL SERVICIO- RESPONSABILIDAD.
-Se pone de manifiesto expresamente, y el Usuario declara comprender, que SERVICIO brindado por la Empresa no pretende proporcionar servicio profesional alguno, ni asesoramiento de dicha índole en el área contable ni en ninguna otra. La Empresa renuncia expresamente a cualquier garantía de que el uso del servicio garantice su cumplimiento de los criterios contables o las obligaciones reglamentarias o legales, o de que los resultados del mismo vayan a ser exactos o suficientes para sus fines. Si bien el sitio proporciona información referida al trámite solicitado, el Usuario no puede inferir que La Empresa está otorgando algún otro tipo de asesoramiento profesional. Si la intención del Usuario es obtener un asesoramiento de ese carácter, deberá dirigirse a un profesional idóneo en la materia según sea la consulta que el Usuario pretendiera evacuar. El contenido del Sitio en tal sentido, no tiene otra finalidad que cumplimentar con el deber de información adecuada impuesto por el ordenamiento jurídico vigente, así como también brindar un mejor servicio a los Usuarios.
-No existe garantía de que de que el acceso vaya a ser continuo o ininterrumpido, y por lo tanto,  La Empresa no será responsable por los fallos del servicio ni de otros problemas inherentes al uso de internet y comunicaciones electrónicas, o de otros sistemas fuera del control razonable de la misma. 
-Por otro lado, se hace saber al Usuario que los trámites objeto del Servicio ofrecido por la Empresa, son trámites que puede realizarlo por cuenta propia el Usuario, y que por lo tanto el servicio brindado tiene por finalidad simplificar y colaborar en la realización de los mismos, no estando el Usuario obligado a la utilización del servicio para ello.
- 
-8) PRECIO.
-El precio que paga el Usuario por la contratación del SERVICIO de:
-i) Inscripción: es de Pesos dos mil seiscientos cuarenta y nueve  ($2649) e incluye el IVA.
-ii) Baja del Impuesto: es de Pesos  dos mil seiscientos cuarenta y nueve  ($2649) e incluye el IVA.
-iii) Recategorización en el Impuesto: es de Pesos mil novecientos noventa y nueve ($1999) e incluye el IVA.
-La Empresa se reserva el derecho a modificar el precio por el SERVICIO, el cual será publicado en la web de la misma y regirá a futuro, no retroactivamente, desde el momento de su publicación.
-9) FORMA DE PAGO.
-La Empresa pone a disposición del Usuario y éste acepta, un único y exclusivo medio de pago, a saber: Plataforma de “MERCADOPAGO” (www.mercadopago.com.ar). 
-El pago/reembolso a realizar por el servicio - de conformidad a las “condiciones generales de contratación”  - se realizará SIEMPRE en la plataforma de “MERCADOPAGO” (www.mercadopago.com). Estos datos se recogen y tratan por parte de dicha plataforma, siendo un tercero ajeno a La Empresa, quedando Ud. sujeto a su propia política de privacidad y condiciones legales. Los datos en cuestión son obligatorios y de no facilitarse, no se podrá proceder a la contratación del SERVICIO. No obstante, Ud. expresamente consiente que “MERCADOPAGO” pueda ceder estos datos, relativos a la transacción comercial, a La Empresa y la misma pueda tratarlos a los fines establecidos en la presente Política. 
-10) RECTIFICACIÓN DE ERRORES Y REEMBOLSO.
-En el supuesto que se encuentren errores en los datos personales suministrados por el Usuario y que no permitan a La Empresa cumplir con el SERVICIO, se proseguirá de la siguiente manera:
-El Usuario SIEMPRE tiene derecho a rectificar sus datos en el plazo de un (1) día hábil, mediante el envío de un correo electrónico a (Indicar el mail a donde tiene que enviar)
-En caso que La Empresa detecte un error que no le permita continuar con la prestación a su cargo, la misma lo comunicará al Usuario inmediatamente de detectado. Una vez comunicado, el Usuario tendrá otro plazo de un (1) día hábil para enmendar dicho error.
-Con el uso de la tecnología, es frecuente encontrarse con “typos”. Es decir, con errores tipográficos involuntarios producto del uso de teclados u otros dispositivos. Ejemplo: en el campo de “email” escribir “ejemplo@@gmail.com”, donde claramente hay un “@” de más. En dicho supuesto, es facultad y jamás una obligación de La Empresa proceder a rectificar el typo que resulte palpable a los fines de cumplir con la prestación a su cargo. No obstante, comunicará dicho error al Usuario para que proceda a su enmienda.
- 
-La política de devoluciones es la siguiente:
-En caso de que el Usuario NO HAYA enmendado su error en los datos personales en el plazo de un (1) día hábil como se establece en el apartado “B” de esta cláusula, La Empresa sólo percibirá el cincuenta por ciento (%50) del precio y quedará a disposición del Usuario requerir la devolución del otro cincuenta por ciento (%50) restante.
- 
-TODAS LAS DEVOLUCIONES se regirán por la plataforma y mecanismo de “MERCADOPAGO” (www.mercadopago.com.ar). La Empresa NO REALIZA devoluciones en dinero efectivo, ni transferencias bancarias, criptomonedas y/u otro medio de pago que NO SEA LA PLATAFORMA DE “MERCADOPAGO”. A tales fines, el Usuario entiende y acepta que, para el supuesto que proceda la devolución, deberá tramitar la misma conforme a los mecanismos y modos que disponga la plataforma “MERCADOPAGO”, la cual es propiedad de un tercero con el cual La Empresa no tiene ninguna relación comercial y/o jurídica ni de vinculación, dependencia o de algún otro tipo.
-12) MODIFICACIONES DE LAS CONDICIONES GENERALES DE CONTRATACIÓN DEL SERVICIO.
-La Empresa podrá, en cualquier momento y unilateralmente, modificar las presentes condiciones generales de contratación. Tales modificaciones serán comunicadas por La Empresa al correo electrónico consignado por el Usuario en caso que la relación contractual siga vigente al momento de la modificación de las CGC; es decir el período comprendido entre la solicitud y pago del SERVICIO y hasta la entrega de la “Constancia de Inscripción” o “Constancia de Cese de Actividad” según sea el Servicio contratado.
- 
-13) PRUEBA.
-Las constancias emitidas por La Empresa serán consideradas prueba suficiente del cumplimiento de la solicitud de trámite ingresada por el Usuario, y sustituyen la necesidad de cualquier otro documento y son plenamente oponibles al Usuario y a todo tipo de terceros. 
-14) PLAZO DE CUMPLIMIENTO DEL SERVICIO.
-La Empresa, cuando la información proporcionada sea correcta, veraz y cumpla en un todo con lo requerido en estas CGC, se compromete a finalizar la ejecución del SERVICIO en los siguientes términos:
-i) Servicio de INSCRIPCIÓN: La Empresa hará entrega de la “Constancia de Inscripción” - principal obligación a su cargo - al Usuario en el plazo de cuatro (4) días hábiles desde que fuera requerido y pagado el SERVICIO. No obstante, siendo que la entrega de la constancia depende, pura y exclusivamente de AFIP, el plazo quedará prorrogado tácitamente si AFIP establece otros plazos mayores al aquí establecido y/o no cumple en entregarla.
-ii) Servicio de Baja de Impuesto: La Empresa hará entrega de la “Constancia de Cese de Actividad” para el período, mes y año indicado por el Usuario- principal obligación a su cargo - al Usuario en el plazo de dos (2) días hábiles desde que fuera requerido y pagado el SERVICIO. No obstante, siendo que la entrega de la constancia depende, pura y exclusivamente de AFIP, el plazo quedará prorrogado tácitamente si AFIP establece otros plazos mayores al aquí establecido y/o no cumple en entregarla.
-iii) Servicio de Recategorización en el Impuesto: La Empresa hará entrega de la “Constancia de Recategorización” - al Usuario en el plazo de cuatro (4) días hábiles desde que fuera requerido, pagado el SERVICIO, y prestado la conformidad respecto a la categoría que surja de la información de Ingresos y Egresos proporcionada por AFIP, según lo manifestado . No obstante, siendo que la entrega de la constancia depende, pura y exclusivamente de AFIP, el plazo quedará prorrogado tácitamente si AFIP establece otros plazos mayores al aquí establecido y/o no cumple en entregarla.
-Asimismo, y en virtud de lo estipulado en la última parte de la cláusula primera, el Usuario reitera conocer y comprender que debe contar previamente con un CUIT (Clave Única de Identificación Tributaria) habilitado según la normativa correspondiente. De no ser así, los plazos estipulados en la presente cláusula no comenzarán a correr hasta tanto sea habilitado el CUIT.
- 
-15) CESIÓN.
-El Usuario no podrá ceder el presente contrato, ni delegar facultades y/u obligaciones sin el previo consentimiento de La Empresa. La Empresa, en cambio, podrá ceder íntegramente su posición contractual sin el consentimiento del Usuario. 
-16) JURISDICCIÓN Y LEY APLICABLE.
-Este acuerdo estará regido en todos sus puntos por las leyes vigentes en la Argentina. Cualquier controversia derivada del presente acuerdo, su existencia, validez, interpretación, alcance o cumplimiento, será sometida a los Tribunales Provinciales en lo Civil y Comercial de la Ciudad Córdoba.
-17) REVOCACIÓN DEL CONTRATO.
-Conforme lo dispuesto por el art. 1116 - Inc. “B” del Código Civil y Comercial, NO ES APLICABLE al presente el DERECHO DE REVOCAR ya que el presente contrato tiene como fin proveer un SERVICIO que se materializa con la entrega de: i) la “Constancia de Inscripción” emitida por AFIP o ii) “Constancia de Cese de Actividad”, siendo cada una, en los términos literales del C.C. y C., un “fichero informático, suministrado por vía electrónica, susceptible de ser descargado o reproducido con carácter inmediato para su uso…”. Por ello, una vez finalizado el servicio y entregada la constancia mencionada, no se podrá revocar la contratación.
-A los fines del art. 1111, esta cláusula se destaca y es la anterior inmediata a la firma (aceptación) por parte del Usuario.
+      <h2 style={{ fontWeight: 'bold', fontSize: '28px', marginBottom: '20px' }}>TÉRMINOS Y CONDICIONES</h2>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Los presentes términos y condiciones (“Acuerdo”) son un contrato legal entre Usted y Bover Sandra Marcela, CUIT Nº 27-16157893-8, una sociedad argentina con domicilio en Joaquin Castellanos 4563, Ciudad de Córdoba, Provincia de Córdoba, Argentina, (“Bover Sandra Marcela”). Utilizar cualquier servicio prestado por Bover Sandra Marcela y/o el sitio web Bover Sandra Marcela.com será considerada una manifestación de aceptación completa a todos los términos y condiciones expresados en este Acuerdo y los otros documentos incorporados. Si Usted no está conforme con cualquiera de los términos y condiciones, no podrá usar los servicios de Bover Sandra Marcela.
+      </p>
 
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>1.- CLÁUSULAS GENERALES</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        1.1.- Documentos incorporados. Cuando Usted accede al sitio web de Bover Sandra Marcela y/o utilice algún servicio de Bover Sandra Marcela, acuerda que la relación entre Bover Sandra Marcela y Usted será regida por los términos y condiciones de este Acuerdo, la Política de Privacidad y la documentación específica sobre los Servicios y precios. Todos estos documentos, incluyendo sus futuras modificaciones, se incorporan íntegramente como parte de este Acuerdo.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        1.2.- Vigencia. La relación contractual permanecerá vigente según el tipo de servicio contratado y las condiciones especificadas.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        1.3.- Modificaciones. Este Acuerdo sólo podrá ser modificado por escrito, notificando al usuario con al menos cinco (5) días hábiles de antelación. Si el usuario no acepta los cambios, podrá rescindir el contrato sin cargo adicional.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        1.4.- Acuerdo íntegro. Este Acuerdo constituye la totalidad del acuerdo entre Usted y Bover Sandra Marcela, reemplazando cualquier acuerdo previo.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>2.- FORMULARIO DE SOLICITUD DE TRÁMITE</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Todo usuario que desee utilizar el servicio debe hacerlo mediante el sitio web www.genimpositivo.com, completando los datos solicitados según el tipo de servicio requerido. Bover Sandra Marcela no se responsabiliza por la veracidad de los datos ingresados y puede rechazar solicitudes en caso de inconsistencias.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>3.- OBLIGACIONES DEL CLIENTE Y LIMITACIONES</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        3.1.- No violar la ley. Usted se compromete a no usar los servicios de manera ilegal o fraudulenta.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        3.2.- Seguridad. Es responsabilidad del usuario proteger la información en su dispositivo.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        3.3.- Datos e información proporcionados. Usted es responsable de la veracidad, exactitud e integridad de los datos ingresados.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        3.4.- Autorizaciones. Usted autoriza a Bover Sandra Marcela a solicitar información de empresas con las que colabora para gestionar facturación.
+      </p>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        3.5.- Uso de la clave fiscal. Usted presta consentimiento para que Bover Sandra Marcela utilice su clave fiscal en la prestación del servicio, respetando siempre la confidencialidad.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>4.- COMUNICACIONES</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Todas las comunicaciones con el usuario serán electrónicas, mediante correo o notificaciones en el sitio web.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>5.- FORMA Y MODALIDAD DE CONTRATACIÓN</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        El contrato es a distancia y la navegación del sitio es gratuita hasta que se apriete el botón “Finalizar”.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>6.- PERFECCIÓN DEL CONTRATO</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        El contrato se considera perfeccionado al realizar el pago correspondiente y completar el formulario de contratación.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>7.- ACEPTACIÓN DEL CONTRATO</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Tras la perfección del contrato, Bover Sandra Marcela enviará un correo de aceptación del servicio.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>8.- CARÁCTER DEL SERVICIO Y RESPONSABILIDAD</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        El servicio no constituye asesoramiento profesional y Bover Sandra Marcela no garantiza resultados exactos ni cumplimiento de obligaciones legales.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>9.- DESCARGO DE GARANTÍAS</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Bover Sandra Marcela no otorga garantías sobre la utilización del sitio ni del servicio, y usted asume todos los riesgos relacionados con su uso.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>10.- LIMITACIÓN DE RESPONSABILIDAD</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        La responsabilidad máxima de Bover Sandra Marcela se limita al monto abonado por el servicio o a 500 UVA según corresponda.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>11.- PRECIOS Y CONDICIONES DE PAGO</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Incluye detalles sobre servicios, precios, facturación, mora e intereses aplicables.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>12.- FORMA DE PAGO</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        El pago se realiza exclusivamente mediante la plataforma MERCADOPAGO (www.mercadopago.com.ar).
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>13.- RECTIFICACIÓN DE ERRORES Y REEMBOLSO</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Usted tiene un día hábil para rectificar errores en los datos. Las devoluciones se realizan únicamente a través de MERCADOPAGO.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>14.- MODIFICACIONES DE LAS CONDICIONES GENERALES</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Bover Sandra Marcela puede modificar unilateralmente los términos y condiciones y notificará al usuario mediante correo electrónico.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>15.- PRUEBA</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Las constancias emitidas por Bover Sandra Marcela serán prueba suficiente del cumplimiento del trámite.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>16.- LEY APLICABLE; DISPUTAS Y JURISDICCIÓN</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Se aplican las leyes de la República Argentina y las disputas se resolverán ante tribunales ordinarios de Córdoba.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>17.- NOTIFICACIONES</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Incluye notificaciones tanto por parte de Bover Sandra Marcela como del usuario.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>18.- CESIÓN</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Usted no puede ceder el contrato, Bover Sandra Marcela sí puede ceder su posición contractual.
+      </p>
+
+      <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>19.- REVOCACIÓN DEL CONTRATO</h4>
+      <p style={{ textAlign: 'justify', marginBottom: '20px' }}>
+        Una vez finalizado el servicio y entregada la documentación, no se puede revocar la contratación.
+      </p>
+
+      <p style={{ textAlign: 'justify', marginTop: '30px', marginBottom: '20px' }}>
+        Si aún le quedan dudas puede escribirnos por correo electrónico a gen.impositivo@gmail.com o utilizar el formulario de contacto.
       </p>
     </Container>
   );
 }
 
-export default Terms;
+export default TerminosYCondiciones;

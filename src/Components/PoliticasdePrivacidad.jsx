@@ -5,96 +5,123 @@ function Politicas() {
   return (
     <Container className="my-5">
       <h2>Politicas de Privacidad</h2>
-      <h3>
-        Vigencia desde 14/06/2022
-        </h3>
-      <h3>
-      CONDICIONES GENERALES DE CONTRATACIÓN
-      </h3>
-      <p>
-       CONDICIONES GENERALES DE CONTRATACIÓN
-Los presentes “Condiciones Generales de Contratación” (en adelante, “CGC”), constituyen un contrato entre una persona física (en adelante, “El Usuario” o, en plural, “Los Usuarios”) que desee acceder y/o usar el servicio brindado por “SANSTAG S.A.S, CUIT: 30-71606891-5 con domicilio en José Hernández 4813 Barrio Parque Liceo I Sección de la Ciudad de Córdoba, en la web www.monotributo.digital (en adelante la “Empresa”), en cuyo caso el Usuario estará sujeto a las siguientes condiciones generales de contratación. 
-En estas Condiciones Generales se describen todos los derechos, y obligaciones de las partes al utilizar el servicio de www.monotributo.digital.
-Es obligación del Usuario leer y aceptar las condiciones que se establecen en adelante, como así también las relacionadas a las Políticas de Privacidad - las cuales forman parte de las presentes - previo a proceder la utilización los servicios proporcionados por la Empresa. En caso de no estar de acuerdo con alguna/s de las cláusulas insertas, deberá abstenerse de la utilización de los servicios que brinde o pudiere brinda en un futuro la Empresa. La utilización del servicio implica la aceptación por parte del Usuario de las presentes CGC.-
-A todo efecto, se entiende por:
-Usuario: Persona física que desea utilizar y/o acceder a la contratación del SERVICIO. 
-Empresa: SANSTAG S.A.S. - CUIT 30716068915 - con domicilio en José Hernández 4813 Barrio Parque Liceo I Sección de la Ciudad de Córdoba.
-Sitio: www.monotributo.digital
-Servicio: Es el servicio ofrecido por la Empresa. Aquí encontrará tres Servicios  prestados por la misma. Los mismos se encuentran descriptos en la cláusula 1) de las presentes CGC.
-Política: Así se abrevia la presente “Política de Privacidad” del Sitio.
-CGC: Son las “Condiciones Generales de Contratación”, las cuales rigen toda la relación contractual establecida entre el Usuario y la Empresa.
-A.A.I.P.: Agencia de Acceso a la Información Pública - Organismo de contralor.
-D.N.P.D.P.: Dirección Nacional de Protección de Datos Personales - Organismo de contralor.
-Asimismo, se recuerda que es requisito excluyente para la contratación del SERVICIO que Ud. cuente con “Clave Fiscal Nivel 2” de la A.F.I.P. de lo contrario resulta imposible la prestación del mismo.
-1) SERVICIOS OFRECIDOS EN EL SITIO - OBJETO.
-El presente es un contrato de adhesión por el cual Ud. - el Usuario - contrata a La Empresa a los fines de que el mismo le proporcione uno de los siguientes servicios: 
-i) Arbitre los medios necesarios para lograr la inscripción ante la Administración Federal de Ingresos Públicos (AFIP) en el impuesto “Monotributo” y según la  categoría que resulte de los datos suministrados por Ud. y confirmados al momento de perfeccionar el presente contrato (Ver cláusulas 2), 4), 5) y 6). En relación al impuesto de Monotributo, La Empresa deja expresa constancia y el Usuario entiende y consiente, que la inscripción sólo se refiere a la inscripción en el Impuesto de AFIP y no en los eventuales regímenes provinciales (Ej: Ingresos Brutos) y/o municipales como así tampoco se encuentra incluido en el Servicio prestado la inscripción/dada de alta en la obra social elegida, ni tampoco incluye la presentación de declaración jurada “300/97” ante la ANSES, como tampoco el trámite para “Asignaciones Familiares”, trámites todos que deberán correr por cuenta del Usuario.
-ii) El mismo arbitre todos los medios necesarios para lograr la “baja por cese de actividad” (en adelante, “Baja del Impuesto”) del Impuesto de Monotributo (con exactamente los mismos alcances y limitaciones establecidas en la cláusula que antecede con respecto a los regímenes provinciales, municipales, de obra social, etc.) para el período, mes y año que el Usuario le indique. Asimismo, específicamente el Usuario exonera de toda responsabilidad a la Empresa en el caso de solicitud de baja del impuesto realizada por el Usuario, cuando la misma sea producto de culpa o error del mismo. Es decir, si por algún error, el Usuario indicó la baja del impuesto y La Empresa la lleva a cabo, el Usuario - jamás y bajo ninguna circunstancia - podrá reclamar por los daños y perjuicios sufridos a La Empresa, quien diligentemente cumplió con su principal prestación a cargo. La culpa propia del Usuario no podrá ser alegada como fundamento de responsabilidad La Empresa. Aún más, el Usuario entiende y consiente que la baja del impuesto, como fuera aquí descripta, no importa asesoramiento alguno, ni actividad alguna  por parte La Empresa posterior a la obtención de la baja.
-iii) El mismo arbitre todos los medios necesarios para lograr la “recategorización” (en adelante, “Recategorización en el Impuesto”) en el Impuesto de Monotributo (con exactamente los mismos alcances y limitaciones establecidas en la cláusula que antecede con respecto a los regímenes provinciales, municipales, de obra social, etc.) para el período, mes y año que el Usuario le indique. El Servicio brindado por la Empresa se limita exclusivamente a analizar los datos brindados por Afip respecto a Ingresos y Egresos, e informar al Usuario la eventual “nueva categoría” que surge de tal información. En caso de que la “nueva categoría” sugerida sea aceptada por el Usuario, la Empresa procederá a realizar el trámite de recategorización objeto del servicio.  A estos efectos, la Empresa ingresará - mediante expreso mandato y autorización del Usuario - al Sistema Registral del Usuario (Padrón Único del Contribuyente) con su clave fiscal y CUIT/L. Se pone de manifiesto que la categoría sugerida previamente por el Usuario se tomará en cuenta solo a los efectos de sugerencia. No implica una obligación para la Empresa colocarlo en esa categoría, solo se realizará en virtud de la categoría que surja de la información obrante en AFIP. Solo respecto de esta última se realizará el trámite, previo consentimiento según lo mencionado, por parte del Usuario. 
-En todos los casos, el Usuario declara comprender que para poder utilizar los Servicios ofrecidos por la Empresa, debe contar previamente con un CUIT (Clave Única de Identificación Tributaria) habilitado según la normativa correspondiente. De no ser así, y de conformidad a lo estipulado en la cláusula catorce “Plazos para el cumplimiento del Servicio”, los plazos allí estipulados no comenzarán a correr hasta tanto sea habilitada el CUIT, de conformidad a lo aquí indicado.
-2) FORMULARIO DE SOLICITUD DE TRÁMITE.
-Todo Usuario que desee utilizar el servicio proporcionado por la Empresa, debe hacerlo mediante la utilización del sitio web www.monotibuto.digital , (en adelante, el “Sitio”). Asimismo, luego de ingresar, debe consignar todos y cada uno de los datos solicitados en el mismo, según sea el tipo de servicio que el Usuario requiera, y que obviamente sea brindado por La Empresa. La Empresa no se responsabiliza por la veracidad de los datos introducidos por los Usuarios. Los Usuarios serán responsables y garantizan y responden, en cualquier caso, por la veracidad, exactitud, integridad, vigencia y autenticidad de los datos ingresados. Todos los datos proporcionados por los Usuarios revisten el carácter de declaración jurada siendo el mismo responsable por la veracidad, exactitud y vigencia de los mismos.-
- La Empresa no procederá a auditar ni a realizar acción alguna a los fines de validar, verificar, etc. los datos personales proporcionados por Ud. con ocasión de la contratación del SERVICIO. Ud. es el único responsable de ello y no podrá - jamás y bajo ninguna circunstancia - suplantar la identidad de un tercero o utilizar el servicio en perjuicio de un tercero y/o para fines que están vedados legalmente.
- La Empresa se reserva el derecho de rechazar una solicitud de trámite o de cancelarla y/o suspenderla, temporal o definitivamente, en caso de detectar incongruencias o inconsistencias en la información provista por un Usuario. Tal decisión no dará lugar a reclamo alguno de ningún tipo por parte del Usuario.-
-3) COMUNICACIONES.
-El Usuario, por medio de la presente, autoriza de forma expresa la suplantación del soporte físico/papel por el electrónico para todas y cada una de las comunicaciones que La Empresa realice o deba realizar con motivo de la contratación del Servicio. En consecuencia las comunicaciones serán dirigidas a la casilla de correo suministrada por el Usuario.
-4) FORMA Y MODALIDAD DE CONTRATACIÓN.
-Como se estableciera anteriormente, el presente es un contrato a distancia. A los fines de cumplimentar con el art. 1107 del Código Civil y Comercial, se informa mediante las presentes CGC, que a los fines de utilizar correctamente el Sitio, y en consecuencia obtener correctamente el Servicio prestado por La Empresa, se pone a su disposición en el Sitio, una sección de “Preguntas y respuestas” que encontrará en el siguiente enlace: https://monotributo.digital/preguntas-frecuentes
- 
-No obstante, al ser una contratación electrónica a distancia, se informa que la navegación del sitio es gratuita para todo aquello que no sea contratación. Es decir, hasta tanto NO SE APRIETE EL BOTÓN “Finalizar!”, previa lectura de las condiciones de contratación, la navegación es gratuita y no se generará cargo alguno. 
- El pago se genera por servicio solicitado una vez apretado el botón de “Finalizar!”. Advertimos que el principal riesgo de este tipo de contratación es aquel inherente a la contratación electrónica y a distancia. Ya que no presenta ninguna dificultad comprensiva y/o términos extraños o en otra lengua. Desde nuestra plataforma hemos desplegado un diseño de interfaz simple, sencilla de usar para todas las edades y condiciones y didáctica para evitar cualquier tipo de riesgo en el uso de la misma.
-5) PERFECCIÓN DEL CONTRATO.
-Acorde a lo estipulado por los arts. 1105 y 1106 del Código Civil y Comercial de la República Argentina, el presente constituye un contrato de los denominados “a distancia”. El mismo no se considerará perfeccionado, sino hasta haberse hecho efectivo el pago correspondiente, según lo estipulado de las cláusulas 4), 8) y 9) de las presentes CGC, habiendo previamente a ello, completado correctamente el Formulario de contratación que se encuentra en el Sitio (https://monotributo.digital) y previa LECTURA Y CONFORMIDAD a estas condiciones de contratación, las cuales le son puestas a disposición suya de manera inmediatamente previa al botón de "Finalizar!". 
-Ambas partes entienden y consienten en que, antes de la perfección del contrato conforme a lo aquí estipulado, NINGUNA obligación de prestar el servicio pesa sobre La Empresa.
-Las partes - de común acuerdo - aceptan equiparar la firma autógrafa del Usuario a la realizada mediante cualquier tipo de clave, código o elemento de seguridad identificativo utilizado y conocido sólo por El Usuario. 
-6) ACEPTACIÓN DEL CONTRATO.
-Luego de haberse perfeccionado el contrato según lo estipulado en la cláusula que antecede, y dando cumplimiento a lo estipulado por el Art. 1108 del Código Civil y Comercial de la República Argentina, La Empresa enviará un correo electrónico, a la dirección indicada por el Usuario al momento de completar el formulario de solicitud de trámite, la Aceptación de la contratación del Servicio.
- 
-7) CARÁCTER DEL SERVICIO- RESPONSABILIDAD.
-Se pone de manifiesto expresamente, y el Usuario declara comprender, que SERVICIO brindado por la Empresa no pretende proporcionar servicio profesional alguno, ni asesoramiento de dicha índole en el área contable ni en ninguna otra. La Empresa renuncia expresamente a cualquier garantía de que el uso del servicio garantice su cumplimiento de los criterios contables o las obligaciones reglamentarias o legales, o de que los resultados del mismo vayan a ser exactos o suficientes para sus fines. Si bien el sitio proporciona información referida al trámite solicitado, el Usuario no puede inferir que La Empresa está otorgando algún otro tipo de asesoramiento profesional. Si la intención del Usuario es obtener un asesoramiento de ese carácter, deberá dirigirse a un profesional idóneo en la materia según sea la consulta que el Usuario pretendiera evacuar. El contenido del Sitio en tal sentido, no tiene otra finalidad que cumplimentar con el deber de información adecuada impuesto por el ordenamiento jurídico vigente, así como también brindar un mejor servicio a los Usuarios.
-No existe garantía de que de que el acceso vaya a ser continuo o ininterrumpido, y por lo tanto,  La Empresa no será responsable por los fallos del servicio ni de otros problemas inherentes al uso de internet y comunicaciones electrónicas, o de otros sistemas fuera del control razonable de la misma. 
-Por otro lado, se hace saber al Usuario que los trámites objeto del Servicio ofrecido por la Empresa, son trámites que puede realizarlo por cuenta propia el Usuario, y que por lo tanto el servicio brindado tiene por finalidad simplificar y colaborar en la realización de los mismos, no estando el Usuario obligado a la utilización del servicio para ello.
- 
-8) PRECIO.
-El precio que paga el Usuario por la contratación del SERVICIO de:
-i) Inscripción: es de Pesos dos mil seiscientos cuarenta y nueve  ($2649) e incluye el IVA.
-ii) Baja del Impuesto: es de Pesos  dos mil seiscientos cuarenta y nueve  ($2649) e incluye el IVA.
-iii) Recategorización en el Impuesto: es de Pesos mil novecientos noventa y nueve ($1999) e incluye el IVA.
-La Empresa se reserva el derecho a modificar el precio por el SERVICIO, el cual será publicado en la web de la misma y regirá a futuro, no retroactivamente, desde el momento de su publicación.
-9) FORMA DE PAGO.
-La Empresa pone a disposición del Usuario y éste acepta, un único y exclusivo medio de pago, a saber: Plataforma de “MERCADOPAGO” (www.mercadopago.com.ar). 
-El pago/reembolso a realizar por el servicio - de conformidad a las “condiciones generales de contratación”  - se realizará SIEMPRE en la plataforma de “MERCADOPAGO” (www.mercadopago.com). Estos datos se recogen y tratan por parte de dicha plataforma, siendo un tercero ajeno a La Empresa, quedando Ud. sujeto a su propia política de privacidad y condiciones legales. Los datos en cuestión son obligatorios y de no facilitarse, no se podrá proceder a la contratación del SERVICIO. No obstante, Ud. expresamente consiente que “MERCADOPAGO” pueda ceder estos datos, relativos a la transacción comercial, a La Empresa y la misma pueda tratarlos a los fines establecidos en la presente Política. 
-10) RECTIFICACIÓN DE ERRORES Y REEMBOLSO.
-En el supuesto que se encuentren errores en los datos personales suministrados por el Usuario y que no permitan a La Empresa cumplir con el SERVICIO, se proseguirá de la siguiente manera:
-El Usuario SIEMPRE tiene derecho a rectificar sus datos en el plazo de un (1) día hábil, mediante el envío de un correo electrónico a (Indicar el mail a donde tiene que enviar)
-En caso que La Empresa detecte un error que no le permita continuar con la prestación a su cargo, la misma lo comunicará al Usuario inmediatamente de detectado. Una vez comunicado, el Usuario tendrá otro plazo de un (1) día hábil para enmendar dicho error.
-Con el uso de la tecnología, es frecuente encontrarse con “typos”. Es decir, con errores tipográficos involuntarios producto del uso de teclados u otros dispositivos. Ejemplo: en el campo de “email” escribir “ejemplo@@gmail.com”, donde claramente hay un “@” de más. En dicho supuesto, es facultad y jamás una obligación de La Empresa proceder a rectificar el typo que resulte palpable a los fines de cumplir con la prestación a su cargo. No obstante, comunicará dicho error al Usuario para que proceda a su enmienda.
- 
-La política de devoluciones es la siguiente:
-En caso de que el Usuario NO HAYA enmendado su error en los datos personales en el plazo de un (1) día hábil como se establece en el apartado “B” de esta cláusula, La Empresa sólo percibirá el cincuenta por ciento (%50) del precio y quedará a disposición del Usuario requerir la devolución del otro cincuenta por ciento (%50) restante.
- 
-TODAS LAS DEVOLUCIONES se regirán por la plataforma y mecanismo de “MERCADOPAGO” (www.mercadopago.com.ar). La Empresa NO REALIZA devoluciones en dinero efectivo, ni transferencias bancarias, criptomonedas y/u otro medio de pago que NO SEA LA PLATAFORMA DE “MERCADOPAGO”. A tales fines, el Usuario entiende y acepta que, para el supuesto que proceda la devolución, deberá tramitar la misma conforme a los mecanismos y modos que disponga la plataforma “MERCADOPAGO”, la cual es propiedad de un tercero con el cual La Empresa no tiene ninguna relación comercial y/o jurídica ni de vinculación, dependencia o de algún otro tipo.
-12) MODIFICACIONES DE LAS CONDICIONES GENERALES DE CONTRATACIÓN DEL SERVICIO.
-La Empresa podrá, en cualquier momento y unilateralmente, modificar las presentes condiciones generales de contratación. Tales modificaciones serán comunicadas por La Empresa al correo electrónico consignado por el Usuario en caso que la relación contractual siga vigente al momento de la modificación de las CGC; es decir el período comprendido entre la solicitud y pago del SERVICIO y hasta la entrega de la “Constancia de Inscripción” o “Constancia de Cese de Actividad” según sea el Servicio contratado.
- 
-13) PRUEBA.
-Las constancias emitidas por La Empresa serán consideradas prueba suficiente del cumplimiento de la solicitud de trámite ingresada por el Usuario, y sustituyen la necesidad de cualquier otro documento y son plenamente oponibles al Usuario y a todo tipo de terceros. 
-14) PLAZO DE CUMPLIMIENTO DEL SERVICIO.
-La Empresa, cuando la información proporcionada sea correcta, veraz y cumpla en un todo con lo requerido en estas CGC, se compromete a finalizar la ejecución del SERVICIO en los siguientes términos:
-i) Servicio de INSCRIPCIÓN: La Empresa hará entrega de la “Constancia de Inscripción” - principal obligación a su cargo - al Usuario en el plazo de cuatro (4) días hábiles desde que fuera requerido y pagado el SERVICIO. No obstante, siendo que la entrega de la constancia depende, pura y exclusivamente de AFIP, el plazo quedará prorrogado tácitamente si AFIP establece otros plazos mayores al aquí establecido y/o no cumple en entregarla.
-ii) Servicio de Baja de Impuesto: La Empresa hará entrega de la “Constancia de Cese de Actividad” para el período, mes y año indicado por el Usuario- principal obligación a su cargo - al Usuario en el plazo de dos (2) días hábiles desde que fuera requerido y pagado el SERVICIO. No obstante, siendo que la entrega de la constancia depende, pura y exclusivamente de AFIP, el plazo quedará prorrogado tácitamente si AFIP establece otros plazos mayores al aquí establecido y/o no cumple en entregarla.
-iii) Servicio de Recategorización en el Impuesto: La Empresa hará entrega de la “Constancia de Recategorización” - al Usuario en el plazo de cuatro (4) días hábiles desde que fuera requerido, pagado el SERVICIO, y prestado la conformidad respecto a la categoría que surja de la información de Ingresos y Egresos proporcionada por AFIP, según lo manifestado . No obstante, siendo que la entrega de la constancia depende, pura y exclusivamente de AFIP, el plazo quedará prorrogado tácitamente si AFIP establece otros plazos mayores al aquí establecido y/o no cumple en entregarla.
-Asimismo, y en virtud de lo estipulado en la última parte de la cláusula primera, el Usuario reitera conocer y comprender que debe contar previamente con un CUIT (Clave Única de Identificación Tributaria) habilitado según la normativa correspondiente. De no ser así, los plazos estipulados en la presente cláusula no comenzarán a correr hasta tanto sea habilitado el CUIT.
- 
-15) CESIÓN.
-El Usuario no podrá ceder el presente contrato, ni delegar facultades y/u obligaciones sin el previo consentimiento de La Empresa. La Empresa, en cambio, podrá ceder íntegramente su posición contractual sin el consentimiento del Usuario. 
-16) JURISDICCIÓN Y LEY APLICABLE.
-Este acuerdo estará regido en todos sus puntos por las leyes vigentes en la Argentina. Cualquier controversia derivada del presente acuerdo, su existencia, validez, interpretación, alcance o cumplimiento, será sometida a los Tribunales Provinciales en lo Civil y Comercial de la Ciudad Córdoba.
-17) REVOCACIÓN DEL CONTRATO.
-Conforme lo dispuesto por el art. 1116 - Inc. “B” del Código Civil y Comercial, NO ES APLICABLE al presente el DERECHO DE REVOCAR ya que el presente contrato tiene como fin proveer un SERVICIO que se materializa con la entrega de: i) la “Constancia de Inscripción” emitida por AFIP o ii) “Constancia de Cese de Actividad”, siendo cada una, en los términos literales del C.C. y C., un “fichero informático, suministrado por vía electrónica, susceptible de ser descargado o reproducido con carácter inmediato para su uso…”. Por ello, una vez finalizado el servicio y entregada la constancia mencionada, no se podrá revocar la contratación.
-A los fines del art. 1111, esta cláusula se destaca y es la anterior inmediata a la firma (aceptación) por parte del Usuario.
+      <div style={{ textAlign: 'justify', fontSize: '16px', lineHeight: '1.6' }}>
+  <h4 style={{ fontWeight: 'bold', fontSize: '22px', marginTop: '30px' }}>Política de Privacidad</h4>
 
-      </p>
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>1.- CONSIDERACIONES PREVIAS</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Recuerde que Bover Sandra Marcela no pertenece ni reemplaza a un estudio jurídico y/o contable. En todo supuesto que el Usuario busque mayor asesoramiento que el aquí brindado, le aconsejamos que recurra a los servicios de un profesional habilitado.
+    La presente Política de Privacidad establece los términos en que Bover Sandra Marcela (“Bover Sandra Marcela”), CUIT Nº 27-16157893-8, constituyendo domicilio a todos efectos en relación con esta Política en Joaquín Castellanos N°4563, Barrio Parque Liceo II Sección, Ciudad de Córdoba, Provincia de Córdoba, Argentina, como trataremos de manera segura, responsable y confidencial, los datos y la información proporcionada por los usuarios al momento de utilizar nuestro sitio web u otros servicios. Siguiendo el compromiso asumido respecto de la seguridad de los datos y la información del usuario, manifestamos que será utilizada en los términos de Política de Privacidad. Sin embargo, esta Política puede ser actualizada y/o modificada.
+    Todas las personas que visitan el sitio web de Bover Sandra Marcela y/o utilicen los servicios de Bover Sandra Marcela, prestan su conformidad a los términos informados en esta Política. Aquel usuario que no estuviera de acuerdo, deberá abstenerse de utilizar los recursos y servicios de proporcionados por BOVER SANDRA MARCELA.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>2.- DERECHO A LA INFORMACIÓN</h4>
+  <p style={{ marginBottom: '20px' }}>
+    En cumplimiento del Art. 5, de la Ley 25.326 de Ley de Protección de datos personales, “Bover Sandra Marcela” (La Empresa) INFORMA:
+    De la política de protección de datos de carácter personal de la página www.genimpositivo.com propiedad de la Empresa.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>3.- ALOJAMIENTO WEB</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Nuestros servidores se encuentran en el ámbito de la República Argentina. Todo de conformidad con el art. 3 de la Disposición 60 – E/2016 de la Dirección Nacional de Protección de Datos y el art. 12 de la Ley 25.326. Ellos cuentan con medidas de seguridad técnicas y organizativas diseñadas para garantizar la integridad, disponibilidad y confidencialidad de sus datos personales.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>4.- COMUNICACIONES - FORMULARIOS WEB – INFORMACION RECOGIDA - REGISTRO DE BASE DE DATOS ANTE LA DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES DE LA AGENCIA DE ACCESO A LA INFORMACIÓN PÚBLICA</h4>
+  <p style={{ marginBottom: '20px' }}>
+    La Empresa le informa a Ud. que siempre que establezca algún tipo de comunicación con la misma (por cualquier medio que lo haga), sus datos serán guardados y tratados por la Empresa en una base de datos debidamente registrada.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>4.1.- ¿Qué información es recogida por Bover Sandra Marcela?</h4>
+  <p style={{ marginBottom: '20px' }}>
+    En relación con las personas que simplemente acceden al sitio web de Bover Sandra Marcela sin registrarse, recopilamos y almacenamos todos o algunos de los siguientes datos: Información de conexión incluyendo la hora, fecha, duración de uso del sitio web, origen, identificación del dispositivo y sistema operativo. Para aquellas personas que se registran con Bover Sandra Marcela y/o utilizan alguno de nuestros servicios, recopilamos y almacenamos los datos mencionados en el párrafo anterior, y todos o algunos de los siguientes datos: Nombre completo, domicilio, fecha de nacimiento, número telefónico, email y/u otros datos de contacto, información de pago, documento de identidad y/o identificación fiscal, clave fiscal, información y datos financieros y de facturación, historial del uso de servicios de Bover Sandra Marcela y comunicaciones con la empresa. Los datos personales y otra información así recopilada se almacenan en un archivo o banco de datos electrónico administrado por Bover Sandra Marcela. Destacamos que no recogemos ni recopilamos datos sensibles; estos son datos personales que revelan origen racial y étnico, opiniones políticas, convicciones religiosas, filosóficas o morales, afiliación sindical o información referente a la salud o a la vida sexual.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>4.2.- Resguardo de los datos</h4>
+  <p style={{ marginBottom: '20px' }}>
+    De acuerdo con el art. 21 de la Ley 25.326, le informamos que los datos personales que se obtengan como consecuencia del uso de nuestra plataforma son incorporados a una base de datos titularidad de la Empresa. Dicha base datos se consigna bajo el nombre “CLIENTES” y se encuentra debidamente inscripta en la Dirección Nacional de Protección de datos.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>5.- EXACTITUD Y VERACIDAD DE LOS DATOS FACILITADOS</h4>
+  <p style={{ marginBottom: '20px' }}>
+    El usuario, como titular de los datos garantiza y responde, en cualquier caso, de la exactitud, veracidad, vigencia y autenticidad de los datos proporcionados a Bover Sandra Marcela, y se compromete a mantenerlos debidamente actualizada. En lo que se relaciona con nuestros servicios en el rubro de los impuestos y la facturación, tenga en cuenta que la falsedad o inexactitud de los datos proporcionados por el usuario puede configurar un delito, fraude u otra contravención a las normas aplicables, por el que Bover Sandra Marcela en ningún caso se responsabilizará. Se exonera a la Empresa por cualquier responsabilidad al respecto.
+    El USUARIO NO SE ENCUENTRA OBLIGADO a facilitar sus datos personales, a menos que quiera contratar el SERVICIO. De contratar, el USUARIO se obliga a suministrar correctamente sus datos personales, sin suplantar la identidad de otra persona ni incurrir en supuestos de fraudes. El USUARIO deberá velar por el acatamiento de la normativa de Protección de datos personales vigente, especialmente la Ley 25.326.
+    Se exonera a la Empresa de responsabilidad ante cualquier daño o perjuicio que pudiera sufrir el usuario como consecuencia de errores, defectos u omisiones de cualquier tipo por el uso de información facilitada por el Usuario en favor de la Empresa.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>6.- DERECHOS SOBRE LOS DATOS RECOPILADOS POR BOVER SANDRA MARCELA</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Usted tiene todos los derechos garantizados por la Ley Nº 25.326 de Protección de los Datos Personales, su reglamentación y toda normativa complementaria en Argentina. Sin limitar la generalidad de esta declaración, destacamos que el titular de los datos personales podrá ejercitar los derechos de acceder, cancelar y actualizar su información personal, incluyendo su dirección de e-mail, así como a oponerse al tratamiento de la misma y a ser informado de las cesiones y/o transferencias internacionales de sus datos personales. El titular de los datos tiene también el derecho de acceder a los mismos dentro de los diez (10) días corridos desde la acreditación de su identidad, en forma gratuita a intervalos no inferiores a seis (6) meses, salvo que se acredite un interés legítimo al efecto. Asimismo, los titulares de los datos tienen derecho a que sus datos protegidos por la mencionada Ley sean rectificados, actualizados y, en caso de corresponder, suprimidos o sometidos a confidencialidad, dentro de los cinco (5) días hábiles de acreditada su identidad y de requerida la medida en cuestión. Por favor tenga en cuenta que para prestar sus servicios, Bover Sandra Marcela requiere recopilar y almacenar datos personales, y la restricción o supresión a los mismos solicitada por el titular generalmente implicará la necesidad de dar de baja por completo el servicio contratado.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>7.- EJERCICIO DE DERECHOS DE ACCESO, ACTUALIZACIÓN, RECTIFICACIÓN Y SUPRESIÓN DE DATOS</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Puede ejercer de manera gratuita dichos derechos y en cumplimiento del art. 6 de la Ley 25.326 de protección de datos personales, es necesario que usted envíe un correo electrónico a gen.impositivo@gmail.com con copia de su DNI para acreditar su personalidad.
+    En el sitio web de la DNPDP - AAIP (https://www.argentina.gob.ar/aaip/datospersonales/derechos) encontrará modelos para ejercer dichos derechos.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>7.1.- ¿Para qué Bover Sandra Marcela usa los datos personales recopilados?</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Nosotros utilizamos los datos personales y otra información proporcionada por nuestros usuarios en primer lugar, con el fin de proporcionar el mejor servicio posible de acuerdo a sus requerimientos, incluyendo para mantener un registro de usuarios, de pedidos en caso que aplique, mejorar nuestros productos y servicios, y llevar a cabo la facturación y gestión de cobranza de nuestros servicios.
+    También podemos utilizar los datos personales para desarrollar estudios internos sobre la demografía, intereses y actitudes de nuestros usuarios y clientes para entender mejor sus necesidades y así poder ofrecer mejores servicios y/o proveerles información que les pueda ser de interés. Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.
+    Ninguno de los datos requeridos por la Empresa reviste el carácter de sensibles conforme al art. 2 de la Ley 25.326. Los datos requeridos son aquellos expresamente indicados en los formularios alojados en la web de la Empresa. En el supuesto que por error y/o intencionalmente el USUARIO proporcionase datos que no fueran requeridos por la Empresa y los mismos revistan el carácter de sensibles, se procederá a la destrucción inmediata de dichos datos por parte de la Empresa.
+    Las finalidades de la recogida de datos son: A) el mantenimiento de la relación contractual establecida entre las partes. B) la gestión, administración, prestación, ampliación y mejora de los servicios prestados y la adecuación de los mismos a las preferencias y gustos de los usuarios. C) la correcta utilización del sitio web, con diversos formularios a completar por el USUARIO, los cuales le permiten a la Empresa ofrecer el SERVICIO. D) Realización de estudios e investigación sobre el comportamiento y/o uso del servicio por parte de nuestros usuarios, ya sean internos y/o externos. E) Asimismo, son requeridos para mantener y fidelizar la relación contractual entre las partes y la correcta gestión, prestación y mejora del SERVICIO.
+    Sus datos también podrán ser utilizados para el envío a Ud. de información técnica, operativa o comercial acerca de los distintos servicios que la Empresa presta actualmente y/o en el futuro, directamente a través de ella o por medio de terceros.
+    En caso de no estar interesado en recibir dichas comunicaciones, deberá enviar un mail a gen.impositivo@gmail.com, solicitando el cese de estas. De esta misma forma podrá revocar este consentimiento en cualquier momento y, específicamente, en cada comunicado comercial o publicitario que se le envíe.
+    Sólo tendrá el carácter de obligatorio el suministro de datos siempre y cuando se proceda a contratar el SERVICIO y/o se contacte a la Empresa.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>7.2.- ¿Bover Sandra Marcela utiliza cookies?</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas nuestro sitio web puede reconocerlo individualmente y por tanto brindarle el mejor servicio personalizado de su web.
+    Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede aceptar o negar el uso de cookies, sin embargo, la mayoría de los navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios. Asimismo, Usted puede eliminar las cookies en cualquier momento desde su dispositivo, aunque esto puede afectar el funcionamiento de nuestros servicios.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>7.3.- Datos relacionados al Pago/Reembolso Online del SERVICIO</h4>
+  <p style={{ marginBottom: '20px' }}>
+    El pago/reembolso a realizar por el servicio - de conformidad a las “condiciones generales de contratación” - se realizará SIEMPRE en la plataforma de “MERCADOPAGO” (www.mercadopago.com).
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>8.- CESIÓN DE DATOS A TERCEROS</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Fuera de los casos legalmente establecidos (art. 11 - Ley 25.326), sus datos no serán comunicados ni cedidos a terceros sin su consentimiento expreso.
+    Conforme el punto “2)” de la presente política, su información será alojada y transferida dentro del ámbito de la Nación, en tanto la misma posea niveles adecuados de protección conforme la reglamentación normativa Argentina.
+    No obstante, a lo dispuesto por el art. 5, Inc. II de la Ley 25.326, se informa aquí y el USUARIO presta consentimiento para ello, que terceras personas - encargadas de prestar servicios para la Empresa- podrán acceder y tratar esta información. Dichas terceras personas serán cuidadosamente seleccionadas y son las encargadas de - por ejemplo - facturar por los servicios, confeccionar escritos legales y/o contables, realización del soporte técnico y tecnológico del Sitio y todo lo relacionado al producto (infraestructura, mantenimiento, manejo de base de datos, etc.) entre otras funciones. Las finalidades de dicha cesión están establecidas en la “Cláusula 7.1” de la presente política.
+    Al momento de sanción de la presente, sólo cuenta con dicho acceso la empresa “BOVER SANDRA MARCELA - CUIT 27-16157893-8”, para lo cual Ud. - el Usuario - presta EXPRESO CONSENTIMIENTO para que revelemos a este tercero sus datos personales y documentación acompañada a los fines de que podamos llevar a cabo la prestación del servicio, para lo cual Ud. nos autoriza expresamente a revelarle a dicho tercero los datos sobre su caso que estimemos convenientes para poder llevar a cabo correctamente la prestación del Servicio.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>9.- MEDIDAS DE SEGURIDAD</h4>
+  <p style={{ marginBottom: '20px' }}>
+    De conformidad al art. 9 - Ley 25.326, la Empresa adopta todas las medidas de índole técnicas y organizativas que sean necesarias para garantizar la confidencialidad, disponibilidad e integridad de sus datos personales.
+    Todo ello para evitar su alteración, pérdida, filtración, tratamiento o acceso no autorizado, etc. La Empresa no será responsable de posibles daños o perjuicios que se pudieran derivar de interferencias, omisiones, interrupciones, ataques maliciosos de terceros, ya sea provocados remota o físicamente, por un virus o malware informáticos, averías tecnológicas imputables a causas ajenas a la Empresa, etc.
+    El USUARIO declara ser consciente y entiende que la Empresa utiliza todos los conocimientos técnicos y organizativos a su alcance para evitar dichos percances. Sin perjuicio de ello, conforme el estado actual de la tecnología, dichos conocimientos y medidas no aseguran al %100 la seguridad de la información. En el ámbito digital, toda medida aplicada tiende a evitar la producción de daños, detectar amenazas y cubrir las vulnerabilidades. En caso de que se explote una vulnerabilidad, se procederá siempre de manera diligente y veloz para la eliminación/tratamiento del mismo.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>10.- DURACIÓN DE ALMACENAMIENTO DE DATO “CLAVE FISCAL”</h4>
+  <p style={{ marginBottom: '20px' }}>
+    En TODO supuesto y de conformidad al art. 25, Inc. II de la Ley 25.326, el dato de CLAVE FISCAL - el cual es facilitado por el USUARIO y es indispensable para poder prestar el servicio - siempre será DESTRUIDO Y CANCELADO de la base de datos de la Empresa inmediatamente luego de que la AFIP de la República Argentina tenga acceso al mismo.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>11.- ACEPTACIÓN DE LA POLÍTICA DE PRIVACIDAD</h4>
+  <p style={{ marginBottom: '20px' }}>
+    El USUARIO garantiza haber sido informado, haber leído y comprendido la presente política y que acepta y consiente el tratamiento de los datos personales de conformidad con la misma. Dicha aceptación constituye un requisito indispensable para poder acceder y/o utilizar los servicios prestados.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>12.- LEGISLACIÓN Y JURISDICCIÓN APLICABLE</h4>
+  <p style={{ marginBottom: '20px' }}>
+    La Ley aplicable a la presente Política será la Ley Nº 25.326 y demás normas complementarias, la legislación de la República Argentina y cualquier controversia derivada de la interpretación o cumplimiento de esta Política será sometida a la jurisdicción de los tribunales ordinarios de la ciudad de Córdoba, República Argentina.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>12.1.- Modificaciones a la Política de Privacidad</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Bover Sandra Marcela se reserva el derecho de modificar la presente política en cualquier momento, debiendo el usuario revisarla periódicamente. La versión vigente se encontrará siempre disponible en el sitio web oficial de la Empresa.
+  </p>
+
+  <h4 style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '25px' }}>12.2.- Contacto</h4>
+  <p style={{ marginBottom: '20px' }}>
+    Para cualquier consulta relacionada con la presente Política de Privacidad, puede contactarnos a través de nuestro correo electrónico gen.impositivo@gmail.com. También podrá comunicarse vía telefónica o a través de los formularios de contacto disponibles en nuestro sitio web.
+  </p>
+</div>
+
     </Container>
   );
 }
