@@ -8,8 +8,6 @@ function Politicas() {
       <h2 className="titulo-principal">Políticas de Privacidad</h2>
       <div className="contenido-politicas">
 
-        <h4 className="titulo-seccion">Política de Privacidad</h4>
-
         <h4 className="subtitulo">1.- Consideraciones Previas</h4>
         <p className="parrafo">Recuerde que Bover Sandra Marcela no pertenece ni reemplaza a un estudio jurídico y/o contable. En todo supuesto que el Usuario busque mayor asesoramiento que el aquí brindado, le aconsejamos que recurra a los servicios de un profesional habilitado. La presente Política de Privacidad establece los términos en que Bover Sandra Marcela (“Bover Sandra Marcela”), CUIT Nº 27-16157893-8, constituyendo domicilio a todos efectos en relación con esta Política en Joaquín Castellanos N°4563, Barrio Parque Liceo II Sección, Ciudad de Córdoba, Provincia de Córdoba, Argentina, como trataremos de manera segura, responsable y confidencial, los datos y la información proporcionada por los usuarios al momento de utilizar nuestro sitio web u otros servicios. Siguiendo el compromiso asumido respecto de la seguridad de los datos y la información del usuario, manifestamos que será utilizada en los términos de Política de Privacidad. Sin embargo, esta Política puede ser actualizada y/o modificada. Todas las personas que visitan el sitio web de Bover Sandra Marcela y/o utilicen los servicios de Bover Sandra Marcela, prestan su conformidad a los términos informados en esta Politica. Aquel usuario que no estuviera de acuerdo, deberá abstenerse de utilizar los recursos y servicios de proporcionados por BOVER SANDRA MARCELA.</p>
 
