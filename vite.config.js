@@ -8,7 +8,8 @@ export default defineConfig({
     host: true, // o "0.0.0.0"
     allowedHosts: [
       '268758491758.ngrok-free.app',
-       'https://accountant-application.onrender.com'// <--- agregá tu dominio ngrok aquí
+       'https://accountant-application.onrender.com',
+       'https://www.genimpositivo.com'// <--- agregá tu dominio ngrok aquí
     ]
   }
 })
