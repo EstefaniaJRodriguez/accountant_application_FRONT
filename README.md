@@ -1,4 +1,4 @@
-# React + Vite
+# Accountant App
 
 Accountant aplication Front is a repository where you can find the frontend code for an app regarding to accountant services. This app was developed in REACT JS , using Express and Bootstrap React framework.
 
