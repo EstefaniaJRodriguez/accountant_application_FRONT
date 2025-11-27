@@ -17,6 +17,7 @@ import PagoExitoso from "./Components/PagoExitoso.jsx";
 import SolicitudesGrid from "./Components/adminPanel.jsx";
 import Politicas from "./Components/PoliticasdePrivacidad.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute.jsx";
+import Login from "./Components/Login.jsx";
 import './App.css'
 
 // 👉 Componente Home
@@ -76,6 +77,7 @@ function App() {
             <SolicitudesGrid />
           </ProtectedRoute>
         } />
+        <Route path="/login" element={<Login />} />
       </Routes>
       </div>
       <Footer />
