@@ -16,6 +16,7 @@ import Terms from './Components/TerminosyCondiciones.jsx';
 import PagoExitoso from "./Components/PagoExitoso.jsx";
 import SolicitudesGrid from "./Components/adminPanel.jsx";
 import Politicas from "./Components/PoliticasdePrivacidad.jsx";
+import ProtectedRoute from "./Components/ProtectedRoute.jsx";
 import './App.css'
 
 // 👉 Componente Home
@@ -70,7 +71,11 @@ function App() {
           <Route path="/terminos" element={<Terms />} />
           <Route path="/privacidad" element={<Politicas />} />
           <Route path="/pago-exitoso/:id" element={<PagoExitoso />} />
-          <Route path="/admin" element={<SolicitudesGrid />} />
+          <Route path="/admin" element={
+          <ProtectedRoute requiredRole="admin">
+            <SolicitudesGrid />
+          </ProtectedRoute>
+        } />
       </Routes>
       </div>
       <Footer />
