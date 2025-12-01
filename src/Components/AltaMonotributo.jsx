@@ -37,7 +37,7 @@ function AltaMonotributoForm() {
 
  const [categorias, setCategorias] = useState([]);
 
-// Cargar categorías desde el backend al montar el componente
+// Cargar categorías desde el backend al montar el componenteF
 useEffect(() => {
   const fetchCategorias = async () => {
     try {

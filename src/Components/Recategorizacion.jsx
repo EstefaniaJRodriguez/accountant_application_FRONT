@@ -88,10 +88,16 @@ const RecategorizacionMonotributoForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    
     try {
+      const dataToSend = {
+        ...formData,
+        precioTramite: Number(precioTramite),
+      };
+    
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/api/recatego/create_preference`,
-        { ...formData, precioTramite, precioGestionExtra }
+        dataToSend
       );
       const preferenceId = response.data.preferenceId;
       window.location.href = `https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=${preferenceId}`;

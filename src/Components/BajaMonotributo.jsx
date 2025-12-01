@@ -28,11 +28,18 @@ function BajaMonotributoForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
+      const dataToSend = {
+        ...formData,
+        precioTramite: Number(precioTramite),
+      };
+    
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/api/baja/create_preference`,
-        formData
+        dataToSend
       );
+
       const preferenceId = response.data.preferenceId;
       window.location.href = `https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=${preferenceId}`;
     } catch (error) {
