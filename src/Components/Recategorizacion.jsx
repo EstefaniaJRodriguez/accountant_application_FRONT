@@ -268,7 +268,7 @@ const RecategorizacionMonotributoForm = () => {
           <div className="text-center mt-4 mb-3">
             <p className="fw-bold">Monto a abonar por la gestión del trámite: ${precioTramite}</p>
         
-            <p className="fw-bold">Total a pagar por la gestión del trámite: ${total.toLocaleString("es-AR")}</p>
+           
           </div>
 
           {/* Botón */}
