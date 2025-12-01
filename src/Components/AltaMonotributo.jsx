@@ -123,7 +123,7 @@ useEffect(() => {
   };
 
   // Calcular total mostrado al usuario
-  const total = precioTramite + (sinCuit ? 10000 : 0);
+  const total = precioTramite + (sinCuit ? 5000 : 0);
 
   return (
     <section className="py-5 bg-light">
@@ -172,7 +172,7 @@ useEffect(() => {
               checked={sinCuit}
               onChange={(e) => {
                 setSinCuit(e.target.checked);
-                setPrecioGestionExtra(e.target.checked ? 10000 : 0);
+                setPrecioGestionExtra(e.target.checked ? 5000 : 0);
                 if (e.target.checked) {
                   handleChange({ target: { name: "cuit", value: "" } });
                 }
