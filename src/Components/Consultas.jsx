@@ -52,7 +52,7 @@ function Consultas() {
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
         ¿Buscas asesoramiento online?
       </h2>
-      <p>Dejanos tu/s consultas, aboná la misma y te respondemos al instante.</p>
+      <p>Dejanos tu consulta y te respondemos al instante.</p>
 
       <Container>
         <Form onSubmit={handleSubmit}>
