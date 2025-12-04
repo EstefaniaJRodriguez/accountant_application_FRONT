@@ -6,7 +6,7 @@ import axios from "axios";
 import "./Card.css";
 import { Link } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap"; 
 
 function AltaMonotributoForm() {
   const [formData, setFormData] = useState({
@@ -22,10 +22,10 @@ function AltaMonotributoForm() {
     actividad: "",
     ingresos: "",
     categoriaDeseada: "",
-    condicion: "autonomo",
+    condicion: "",         // corregido
     condicionDetalle: "",
     tipoIngreso: "",
-    servicio: "",
+    servicio: "",          // corregido
   });
 
   const [sinCuit, setSinCuit] = useState(false);
@@ -38,12 +38,11 @@ function AltaMonotributoForm() {
 
   const [categorias, setCategorias] = useState([]);
 
+  // Cargar categorías al iniciar
   useEffect(() => {
     const fetchCategorias = async () => {
       try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/monotributo/categorias`
-        );
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/monotributo/categorias`);
         setCategorias(response.data);
       } catch (error) {
         console.error("Error al obtener categorías:", error);
@@ -53,25 +52,25 @@ function AltaMonotributoForm() {
     fetchCategorias();
   }, []);
 
+  // Manejar cambios
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    console.log("Datos enviados handlechange:", formData);
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
+  // Validar Monotributo
   const validarMonotributo = async () => {
-    if (
-      !formData.ingresos ||
-      !formData.categoriaDeseada ||
-      !formData.servicio ||
-      !formData.condicion
-    ) {
+    if (!formData.ingresos || !formData.categoriaDeseada || !formData.servicio || !formData.condicion) {
       setValorMonotributo(null);
       setMensajeMonotributo("");
       return;
     }
 
-    if (formData.condicion !== "autonomo" && !formData.condicionDetalle) {
+    // Si marca que tiene otros ingresos, debe elegir detalle
+    if (formData.condicion === "otro" && !formData.condicionDetalle) {
       setValorMonotributo(null);
       setMensajeMonotributo("Debés seleccionar el tipo de ingreso.");
       return;
@@ -84,19 +83,11 @@ function AltaMonotributoForm() {
 
     try {
       setLoadingValor(true);
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/api/monotributo/validar`,
-        {
-          categoria: formData.categoriaDeseada,
-          ingresos: Number(formData.ingresos),
-          tipo: formData.servicio.toLowerCase(),
-          condicion: condicionFinal,
-        }
-      );
-
-      console.log("Datos enviados validarmonotribito:", {
-        ...formData,
-        condicionFinal,
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/monotributo/validar`, {
+        categoria: formData.categoriaDeseada,
+        ingresos: Number(formData.ingresos),
+        tipo: formData.servicio.toLowerCase(),
+        condicion: condicionFinal,
       });
 
       if (response.data.ok) {
@@ -115,16 +106,18 @@ function AltaMonotributoForm() {
     }
   };
 
+  // Recalcular cuando se cambia algo relevante
   useEffect(() => {
     validarMonotributo();
   }, [
     formData.ingresos,
     formData.servicio,
     formData.categoriaDeseada,
-    formData.condicionDetalle,
     formData.condicion,
+    formData.condicionDetalle,
   ]);
 
+  // Enviar formulario (Mercado Pago)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -156,22 +149,247 @@ function AltaMonotributoForm() {
   return (
     <section className="py-5 bg-light">
       <Container>
-        <h2 className="text-center mb-4">
-          Datos para el trámite de ALTA de Monotributo
-        </h2>
+        <h2 className="text-center mb-4">Datos para el trámite de ALTA de Monotributo</h2>
         <p>Completá el siguiente formulario para gestionar tu ALTA de Monotributo:</p>
 
         <Form onSubmit={handleSubmit}>
 
-          {/* ...todo tu formulario arriba queda IGUAL */}
+          {/* NOMBRE */}
+          <Form.Group className="mb-3">
+            <Form.Label>Nombre completo</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ingresá tu nombre completo"
+              name="nombre"
+              value={formData.nombre}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
 
-          {/* Otros ingresos */}
+          {/* CUIT */}
+          <Form.Group className="mb-3">
+            <Form.Label>CUIT/CUIL</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ingresá tu CUIT"
+              name="cuit"
+              value={formData.cuit}
+              onChange={(e) => {
+                const onlyNums = e.target.value.replace(/\D/g, "");
+                if (onlyNums.length <= 11) {
+                  handleChange({ target: { name: "cuit", value: onlyNums } });
+                }
+              }}
+              disabled={sinCuit}
+              required={!sinCuit}
+            />
+          </Form.Group>
+
+          {/* CHECKBOX SIN CUIT */}
+          <Form.Group className="mb-3">
+            <Form.Check
+              type="checkbox"
+              label="No tengo CUIT"
+              checked={sinCuit}
+              onChange={(e) => {
+                setSinCuit(e.target.checked);
+                setPrecioGestionExtra(e.target.checked ? 5000 : 0);
+                if (e.target.checked) {
+                  handleChange({ target: { name: "cuit", value: "" } });
+                }
+              }}
+            />
+          </Form.Group>
+
+          {sinCuit && (
+            <Form.Text className="text mb-3 d-block">
+              Recordá que al no tener un CUIT, se cobrará un monto extra de ${precioGestionExtra} por la gestión del mismo.
+            </Form.Text>
+          )}
+
+          {/* CLAVE FISCAL */}
+          <Form.Group className="mb-3">
+            <Form.Label>Clave Fiscal</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ingresá tu clave fiscal"
+              name="claveFiscal"
+              value={formData.claveFiscal}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          {/* DOMICILIO */}
+          <br />
+          <Row className="mb-3">
+            <Col md={12}>
+              <Form.Label>Domicilio</Form.Label>
+            </Col>
+          </Row>
+
+          <Row className="mb-3">
+            <Col md={6}>
+              <Form.Control
+                type="text"
+                placeholder="Calle"
+                name="calle"
+                value={formData.calle}
+                onChange={handleChange}
+                required
+              />
+            </Col>
+            <Col md={6}>
+              <Form.Control
+                type="number"
+                placeholder="Número"
+                name="numero"
+                value={formData.numero}
+                onChange={handleChange}
+                required
+              />
+            </Col>
+          </Row>
+
+          <Row className="mb-3">
+            <Col md={6}>
+              <Form.Control
+                type="text"
+                placeholder="Provincia"
+                name="provincia"
+                value={formData.provincia}
+                onChange={handleChange}
+                required
+              />
+            </Col>
+            <Col md={6}>
+              <Form.Control
+                type="text"
+                placeholder="Código Postal"
+                name="cp"
+                value={formData.cp}
+                onChange={(e) => {
+                  const onlyNums = e.target.value.replace(/\D/g, "");
+                  if (onlyNums.length <= 4) {
+                    handleChange({ target: { name: "cp", value: onlyNums } });
+                  }
+                }}
+                required
+              />
+            </Col>
+          </Row>
+
+          {/* TELEFONO */}
+          <Form.Group className="mb-3">
+            <Form.Label>Teléfono</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ej: 5491112345678"
+              name="telefono"
+              value={formData.telefono}
+              onChange={(e) => {
+                const onlyNums = e.target.value.replace(/\D/g, "");
+                if (onlyNums.length <= 13) {
+                  handleChange({ target: { name: "telefono", value: onlyNums } });
+                }
+              }}
+              required
+            />
+          </Form.Group>
+
+          {/* EMAIL */}
+          <Form.Group className="mb-3">
+            <Form.Label>Mail</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Ej: usuario@mail.com"
+              name="mail"
+              value={formData.mail}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          {/* ACTIVIDAD */}
+          <Form.Group className="mb-3">
+            <Form.Label>Actividad que va a ejercer</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ej: Programador, Vendedor, Contador"
+              name="actividad"
+              value={formData.actividad}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          <br />
+          <hr />
+          <Row className="mb-3">
+            <Col md={12}>
+              <Form.Label>
+                <em>Seleccioná los datos a continuación para conocer el valor estimado del monotributo.</em>
+              </Form.Label>
+            </Col>
+          </Row>
+          <hr />
+          <br />
+
+          {/* CATEGORIA */}
+          <Form.Group className="mb-3">
+            <Form.Label>Categoría</Form.Label>
+            <Form.Select
+              name="categoriaDeseada"
+              value={formData.categoriaDeseada}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Seleccione una categoría</option>
+              {categorias.map((cat) => (
+                <option key={cat.categoria} value={cat.categoria}>
+                  Categoría {cat.categoria} - Tope ${Number(cat.ingresos_brutos).toLocaleString("es-AR")}
+                </option>
+              ))}
+            </Form.Select>
+          </Form.Group>
+
+          {/* SERVICIO */}
+          <Form.Group className="mb-3">
+            <Form.Label>Actividad</Form.Label>
+            <Form.Select
+              name="servicio"
+              value={formData.servicio}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="Servicio">Servicio</option>
+              <option value="Venta">Venta</option>
+            </Form.Select>
+          </Form.Group>
+
+          {/* INGRESOS */}
+          <Form.Group className="mb-3">
+            <Form.Label>Ingresos declarados</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="Ej: $500.000"
+              name="ingresos"
+              value={formData.ingresos}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+
+          {/* OTROS INGRESOS */}
           <Form.Group className="mb-3">
             <Form.Label>¿Recibe ingresos por otra actividad?</Form.Label>
             <Form.Select
               name="condicion"
               value={formData.condicion}
               onChange={handleChange}
+              required
             >
               <option value="">Seleccione una opción</option>
               <option value="autonomo">No</option>
@@ -186,6 +404,7 @@ function AltaMonotributoForm() {
                 name="condicionDetalle"
                 value={formData.condicionDetalle}
                 onChange={handleChange}
+                required
               >
                 <option value="">Seleccione una opción</option>
                 <option value="dependencia">Relación de dependencia</option>
@@ -194,31 +413,56 @@ function AltaMonotributoForm() {
             </Form.Group>
           )}
 
-          {/* Valor estimado */}
+          {/* RESULTADO / MENSAJE */}
           {loadingValor ? (
             <Form.Text className="text-muted d-block mb-3">
               Calculando valor estimado del monotributo...
             </Form.Text>
           ) : mensajeMonotributo ? (
-            <div
-              className={`d-block mb-3 ${
-                valorMonotributo ? "text-success" : "text-danger"
-              }`}
-            >
-              <h5 className="fw-semibold fst-italic">{mensajeMonotributo}</h5>
+            <div className={`d-block mb-3 ${valorMonotributo ? "text-success" : "text-danger"}`}>
+              <h5 className="fw-semibold fst-italic">
+                {mensajeMonotributo}
+              </h5>
             </div>
           ) : (
             <Form.Text className="text-muted d-block mb-3">
-              Seleccioná la 'Categoria', 'Actividad' e ingresá tus 'Ingresos
-              declarados' para conocer el valor estimado del monotributo.
+              Seleccioná los campos para conocer el valor estimado del monotributo.
             </Form.Text>
           )}
 
-          {/* ...resto del formulario igual */}
+          {/* TERINOS */}
+          <br />
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              id="termsCheck"
+              required
+              label={
+                <>
+                  Acepto los{" "}
+                  <Link to="/terminos" target="_blank">Términos y Condiciones</Link>{" "}
+                  y la{" "}
+                  <Link to="/privacidad" target="_blank">Política de Privacidad</Link>{" "}
+                  de GEN Impositivo.
+                </>
+              }
+            />
+          </Form.Group>
 
+          {/* MONTO TOTAL */}
+          <div className="text-center mt-4">
+            <p className="fw-bold">Monto trámite: ${precioTramite}</p>
+            <p className="fw-bold">Gestión extra: ${precioGestionExtra}</p>
+            <p className="fw-bold">Total a pagar: ${total.toLocaleString("es-AR")}</p>
+
+            <Button variant="primary" className="button" type="submit" disabled={loading}>
+              Enviar formulario y pagar
+            </Button>
+          </div>
         </Form>
       </Container>
 
+      {/* OVERLAY */}
       {loading && (
         <div
           style={{
@@ -235,11 +479,7 @@ function AltaMonotributoForm() {
             zIndex: 1050,
           }}
         >
-          <Spinner
-            animation="border"
-            role="status"
-            style={{ width: "4rem", height: "4rem" }}
-          />
+          <Spinner animation="border" role="status" style={{ width: "4rem", height: "4rem" }} />
           <p className="mt-3">Redirigiendo a Mercado Pago...</p>
         </div>
       )}
