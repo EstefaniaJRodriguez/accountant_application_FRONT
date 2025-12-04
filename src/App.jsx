@@ -18,6 +18,7 @@ import SolicitudesGrid from "./Components/adminPanel.jsx";
 import Politicas from "./Components/PoliticasdePrivacidad.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute.jsx";
 import Login from "./Components/Login.jsx";
+import PagoFallido from "./Components/PagoFallido.jsx";
 import './App.css'
 
 // 👉 Componente Home
@@ -72,6 +73,8 @@ function App() {
           <Route path="/terminos" element={<Terms />} />
           <Route path="/privacidad" element={<Politicas />} />
           <Route path="/pago-exitoso/:id" element={<PagoExitoso />} />
+          <Route path="/pago-fallido/:id" element={<PagoFallido />} />
+
           <Route path="/admin" element={
           <ProtectedRoute requiredRole="admin">
             <SolicitudesGrid />
