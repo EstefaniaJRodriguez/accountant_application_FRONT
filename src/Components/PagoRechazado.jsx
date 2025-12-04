@@ -1,34 +1,34 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
-const PagoExitoso = () => {
+const PagoRechazado = () => {
   const location = useLocation();
-  const yaGuardado = useRef(false); // Evita doble envío
+  const yaGuardado = useRef(false);
 
-  // Extraemos el tramiteId del pathname
-  const tramiteIdComplete = location.pathname.split("/");
-  const tramiteId = tramiteIdComplete[2];
+  // Obtener tramite_id desde la URL
+  const tramiteIdSplit = location.pathname.split("/");
+  const tramiteId = tramiteIdSplit[2]; // "/pago-rechazado/123"
 
-  // Extraemos los parámetros de Mercado Pago
+  // Obtener query params de Mercado Pago
   const queryParams = new URLSearchParams(location.search);
   const paymentId = queryParams.get("payment_id");
   const status = queryParams.get("status");
   const collectionStatus = queryParams.get("collection_status");
   const preferenceId = queryParams.get("preference_id");
 
-  // 1️⃣ Si no vienen los datos de Mercado Pago → redirigir al inicio
+  // 1️⃣ Si se vuelve desde Mercado Pago sin parámetros → enviar al home
   if (!paymentId || !status) {
     window.location.href = "/";
     return null;
   }
 
-  // 2️⃣ Guardamos el pago solo una vez
+  // 2️⃣ Guardamos el registro del pago fallido una sola vez
   useEffect(() => {
-    const pagoGuardadoKey = `pago_guardado_${paymentId}`;
+    const pagoGuardadoKey = `pago_rechazado_${paymentId}`;
 
     if (localStorage.getItem(pagoGuardadoKey) || yaGuardado.current) return;
 
-    const guardarPago = async () => {
+    const guardarPagoFallido = async () => {
       try {
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/pagos`, {
           method: "POST",
@@ -37,47 +37,46 @@ const PagoExitoso = () => {
             tramite_id: tramiteId,
             pago_id_mp: paymentId,
             monto: null,
-            estado_pago: status,
+            estado_pago: "rechazado",
             metodo_pago: "Mercado Pago",
             detalles: { collectionStatus, preferenceId },
           }),
         });
 
         const data = await res.json();
-        console.log("Pago guardado:", data);
+        console.log("Pago rechazado guardado:", data);
 
         yaGuardado.current = true;
         localStorage.setItem(pagoGuardadoKey, "true");
       } catch (error) {
-        console.error("Error al guardar el pago:", error);
+        console.error("Error guardando pago rechazado:", error);
       }
     };
 
-    guardarPago();
-  }, [paymentId, status, tramiteId, collectionStatus, preferenceId]);
+    guardarPagoFallido();
+  }, [paymentId, tramiteId, collectionStatus, preferenceId]);
 
-  // 3️⃣ UI del componente
+  // 3️⃣ UI
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>✅ Pago Exitoso</h1>
-      <p>
-        Gracias por tu pago, el trámite fue procesado correctamente y el equipo
-        de GEN Impositivo se contactará vía email próximamente.
+    <div style={{ padding: "20px", textAlign: "center" }}>
+      <h1 style={{ color: "#d9534f" }}>❌ Pago Rechazado</h1>
+      <p style={{ fontSize: "17px" }}>
+        El pago no pudo completarse. Por favor intentá nuevamente o probá con otro método.
       </p>
 
-      <h2>📌 Información del pago</h2>
-      <ul>
+      <h2 style={{ marginTop: "30px" }}>📌 Información del intento</h2>
+      <ul style={{ listStyle: "none", padding: 0, fontSize: "16px" }}>
         <li><strong>Payment ID:</strong> {paymentId}</li>
         <li><strong>Status:</strong> {status}</li>
       </ul>
 
       {/* Botón volver al inicio */}
-      <div style={{ marginTop: "20px" }}>
+      <div style={{ marginTop: "25px" }}>
         <button
           onClick={() => (window.location.href = "/")}
           style={{
             padding: "10px 18px",
-            backgroundColor: "#007bff",
+            backgroundColor: "#6c757d",
             color: "white",
             border: "none",
             borderRadius: "6px",
@@ -92,4 +91,4 @@ const PagoExitoso = () => {
   );
 };
 
-export default PagoExitoso;
+export default PagoRechazado;
