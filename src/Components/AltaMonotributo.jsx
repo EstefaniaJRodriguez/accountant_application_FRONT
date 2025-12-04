@@ -60,7 +60,7 @@ useEffect(() => {
 
   // Consulta al backend para validar el monotributo según categoría y actividad
   const validarMonotributo = async () => {
-    if (!formData.ingresos || !formData.categoriaDeseada || !formData.servicio) {
+    if (!formData.ingresos || !formData.categoriaDeseada || !formData.servicio ||  !formData.tipoIngreso) {
       setValorMonotributo(null);
       setMensajeMonotributo("");
       return;
@@ -370,8 +370,8 @@ useEffect(() => {
               onChange={handleChange}
             >
               <option>Seleccione una opción</option>
-              <option>No</option>
-              <option>Sí</option>
+              <option value="autonomo">No</option>
+              <option value="si">Sí</option>
             </Form.Select>
           </Form.Group>
 
