@@ -56,6 +56,8 @@ useEffect(() => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    console.log("Datos enviados handlechange:", formData);
+
   };
 
   // Consulta al backend para validar el monotributo según categoría y actividad
@@ -72,7 +74,9 @@ useEffect(() => {
         categoria: formData.categoriaDeseada,
         ingresos: Number(formData.ingresos),
         tipo: formData.servicio.toLowerCase(), // "servicio" o "venta"
+        otrosIngresos: formData.otrosIngresos
       });
+      console.log("Datos enviados validarmonotribito:", formData);
 
       if (response.data.ok) {
         setValorMonotributo(response.data.monto);
