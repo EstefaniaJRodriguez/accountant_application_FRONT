@@ -22,7 +22,7 @@ function AltaMonotributoForm() {
     actividad: "",
     ingresos: "",
     categoriaDeseada: "",
-    otrosIngresos: "autonomo",
+    condicion: "autonomo",
     tipoIngreso: "",
     servicio: "",
   });
@@ -62,11 +62,15 @@ useEffect(() => {
 
   // Consulta al backend para validar el monotributo según categoría y actividad
   const validarMonotributo = async () => {
-    if (!formData.ingresos || !formData.categoriaDeseada || !formData.servicio ||  !formData.tipoIngreso) {
+    if (!formData.ingresos || !formData.categoriaDeseada || !formData.servicio ||  !formData.condicion) {
       setValorMonotributo(null);
       setMensajeMonotributo("");
       return;
     }
+    const condicionFinal =
+    formData.condicion === "autonomo"
+      ? "autonomo"
+      : formData.tipoIngreso; // dependencia o jubilado
 
     try {
       setLoadingValor(true);
@@ -74,10 +78,12 @@ useEffect(() => {
         categoria: formData.categoriaDeseada,
         ingresos: Number(formData.ingresos),
         tipo: formData.servicio.toLowerCase(), // "servicio" o "venta"
-        otrosIngresos: formData.otrosIngresos
+        condicion: condicionFinal
       });
-      console.log("Datos enviados validarmonotribito:", formData);
-
+      console.log("Datos enviados validarmonotribito:", {
+        ...formData,
+        condicionFinal,
+      });
       if (response.data.ok) {
         setValorMonotributo(response.data.monto);
         setMensajeMonotributo(response.data.mensaje);
@@ -97,7 +103,7 @@ useEffect(() => {
   // Se recalcula automáticamente si cambian ingresos, servicio o categoría
   useEffect(() => {
     validarMonotributo();
-  }, [formData.ingresos, formData.servicio, formData.categoriaDeseada]);
+  }, [formData.ingresos, formData.servicio, formData.categoriaDeseada, formData.condicion, formData.tipoIngreso]);
 
   // Envío del formulario con integración de Mercado Pago
   const handleSubmit = async (e) => {
@@ -369,25 +375,25 @@ useEffect(() => {
           <Form.Group className="mb-3">
             <Form.Label>¿Recibe ingresos por otra actividad?</Form.Label>
             <Form.Select
-              name="otrosIngresos"
-              value={formData.otrosIngresos}
+              name="condicion"
+              value={formData.condicion}
               onChange={handleChange}
             >
               <option>Seleccione una opción</option>
               <option value="autonomo">No</option>
-              <option value="noneautonomo">Sí</option>
+              <option value="tieneOtroIngreso">Sí</option>
             </Form.Select>
           </Form.Group>
 
-          {formData.otrosIngresos === "Sí" && (
+          {formData.tieneOtroIngreso === "Sí" && (
             <Form.Group className="mb-3">
               <Form.Label>Tipo de ingreso</Form.Label>
               <Form.Select
-                name="tipoIngreso"
-                value={formData.tipoIngreso}
+                name="condicionDetalle"
+                value={formData.condicionDetalle}
                 onChange={handleChange}
               >
-                <option value="opcion">Seleccione una opción</option>
+                <option value="">Seleccione una opción</option>
                 <option value="dependencia">Relación de dependencia</option>
                 <option value="jubilado">Jubilado</option>
               </Form.Select>
