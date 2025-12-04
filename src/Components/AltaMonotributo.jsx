@@ -23,6 +23,7 @@ function AltaMonotributoForm() {
     ingresos: "",
     categoriaDeseada: "",
     condicion: "autonomo",
+    condicionDetalle: "",   // dependencia o jubilado
     tipoIngreso: "",
     servicio: "",
   });
@@ -70,7 +71,7 @@ useEffect(() => {
     const condicionFinal =
     formData.condicion === "autonomo"
       ? "autonomo"
-      : formData.tipoIngreso; // dependencia o jubilado
+      : formData.condicionDetalle; // dependencia o jubilado
 
     try {
       setLoadingValor(true);
@@ -381,11 +382,11 @@ useEffect(() => {
             >
               <option>Seleccione una opción</option>
               <option value="autonomo">No</option>
-              <option value="tieneOtroIngreso">Sí</option>
+              <option value="otro">Sí</option>
             </Form.Select>
           </Form.Group>
 
-          {formData.tieneOtroIngreso === "Sí" && (
+          {formData.condicion === "otro" && (
             <Form.Group className="mb-3">
               <Form.Label>Tipo de ingreso</Form.Label>
               <Form.Select
