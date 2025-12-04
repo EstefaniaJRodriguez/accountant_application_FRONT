@@ -22,7 +22,7 @@ function AltaMonotributoForm() {
     actividad: "",
     ingresos: "",
     categoriaDeseada: "",
-    otrosIngresos: "No",
+    otrosIngresos: "autonomo",
     tipoIngreso: "",
     servicio: "",
   });
@@ -375,7 +375,7 @@ useEffect(() => {
             >
               <option>Seleccione una opción</option>
               <option value="autonomo">No</option>
-              <option value="si">Sí</option>
+              <option value="noneautonomo">Sí</option>
             </Form.Select>
           </Form.Group>
 
