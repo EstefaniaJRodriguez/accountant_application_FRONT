@@ -248,6 +248,18 @@ const RecategorizacionMonotributoForm = () => {
           <br></br>
 
           <Form.Group className="mb-3">
+            <Form.Label>Categoría en la que quiere estar</Form.Label>
+            <Form.Select name="categoriaDeseada" value={formData.categoriaDeseada} onChange={handleChange} required>
+              <option value="">Seleccione una categoría</option>
+              {categorias.map((cat) => (
+                <option key={cat.categoria} value={cat.categoria}>
+                  Categoría {cat.categoria} - Tope ${Number(cat.ingresos_brutos).toLocaleString("es-AR")}
+                </option>
+              ))}
+            </Form.Select>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
             <Form.Label>Ingresos de los últimos 12 meses</Form.Label>
             <Form.Control type="number" name="ingresosUltimos12Meses" value={formData.ingresosUltimos12Meses} onChange={handleChange} required />
           </Form.Group>
@@ -261,18 +273,6 @@ const RecategorizacionMonotributoForm = () => {
             </Form.Select>
           </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>Categoría en la que quiere estar</Form.Label>
-            <Form.Select name="categoriaDeseada" value={formData.categoriaDeseada} onChange={handleChange} required>
-              <option value="">Seleccione una categoría</option>
-              {categorias.map((cat) => (
-                <option key={cat.categoria} value={cat.categoria}>
-                  Categoría {cat.categoria} - Tope ${Number(cat.ingresos_brutos).toLocaleString("es-AR")}
-                </option>
-              ))}
-            </Form.Select>
-          </Form.Group>
-
           {/* --- NUEVO: selector sobre otros ingresos (integrado al simulador) --- */}
           <Form.Group className="mb-3">
             <Form.Label>¿Recibe ingresos por otra actividad?</Form.Label>
@@ -281,9 +281,9 @@ const RecategorizacionMonotributoForm = () => {
               value={formData.condicion}
               onChange={handleChange}
             >
-              <option value="">Seleccione una opción (opcional)</option>
-              <option value="autonomo">No (autónomo)</option>
-              <option value="otro">Sí (tengo otro ingreso)</option>
+              <option value="">Seleccione una opción</option>
+              <option value="autonomo">No</option>
+              <option value="otro">Sí</option>
             </Form.Select>
           </Form.Group>
 
