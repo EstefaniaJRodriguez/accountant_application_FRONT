@@ -68,6 +68,13 @@ useEffect(() => {
       setMensajeMonotributo("");
       return;
     }
+
+    // Si NO es autónomo → debe elegir dependencia o jubilado
+  if (formData.condicion !== "autonomo" && !formData.condicionDetalle) {
+    setValorMonotributo(null);
+    setMensajeMonotributo("Debés seleccionar el tipo de ingreso.");
+    return;
+  }
     const condicionFinal =
     formData.condicion === "autonomo"
       ? "autonomo"
