@@ -69,10 +69,9 @@ export default function Login() {
 
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
-            <Form.Label style={{ fontWeight: '600' }}>Correo electrónico</Form.Label>
+            <Form.Label style={{ fontWeight: '600' }}>Usuario</Form.Label>
             <Form.Control
               type="text"
-              placeholder="tu@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -88,7 +87,6 @@ export default function Login() {
             <Form.Label style={{ fontWeight: '600' }}>Contraseña</Form.Label>
             <Form.Control
               type="password"
-              placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
