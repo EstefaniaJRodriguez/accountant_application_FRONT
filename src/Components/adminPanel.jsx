@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Table, Button, Modal, Form } from "react-bootstrap";
 import { Plus } from "lucide-react";
 
+const getToken = () => localStorage.getItem("token");
+
+
 const SolicitudesGrid = () => {
   const [solicitudes, setSolicitudes] = useState([]);
   const [estados, setEstados] = useState([]);
@@ -25,7 +28,11 @@ const SolicitudesGrid = () => {
       if (debouncedCuit) params.append("cuit", debouncedCuit);
       if (debouncedEmail) params.append("email", debouncedEmail);
 
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin?${params.toString()}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin?${params.toString()}`, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        }
+      });
       const data = await res.json();
 
       if (Array.isArray(data)) {
@@ -43,7 +50,10 @@ const SolicitudesGrid = () => {
   useEffect(() => {
     const fetchEstados = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/estados`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/estados`, {
+          headers: { Authorization: `Bearer ${getToken()}` }
+        });
+        
         const data = await res.json();
         setEstados(data);
       } catch (error) {
@@ -53,7 +63,10 @@ const SolicitudesGrid = () => {
 
     const fetchTiposTramite = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/tipos-tramite`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/tipos-tramite`, {
+          headers: { Authorization: `Bearer ${getToken()}` }
+        });
+        
         const data = await res.json();
         setTiposTramite(data);
       } catch (error) {
@@ -99,12 +112,16 @@ const SolicitudesGrid = () => {
   try {
     await fetch(`${import.meta.env.VITE_API_URL}/api/admin/${solicitudSeleccionada.id}`, {
       method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ 
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${getToken()}`
+      },
+      body: JSON.stringify({
         estado: nuevoEstadoId,
         observaciones: observaciones !== undefined ? observaciones : solicitudSeleccionada.observaciones || ""
       }),
     });
+    
 
     const estadoSeleccionado = estados.find((e) => e.id === parseInt(nuevoEstadoId));
 
