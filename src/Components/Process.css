@@ -48,4 +48,29 @@
   color: #475569;
   margin-top: 8px;
 }
+.process-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #0a2a57;
+  width: 80px;            /* mismo ancho para todos */
+  height: 80px;           /* opcional: cuadrado perfecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;   /* centrar y dejar espacio abajo */
+  line-height: 1;        /* evita que se mueva verticalmente */
+}
+.process-number {
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: #0a2a57;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #e8eff8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
 
