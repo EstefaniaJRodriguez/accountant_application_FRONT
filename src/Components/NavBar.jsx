@@ -20,7 +20,7 @@ function NavBar() {
   };
 
   return (
-    <Navbar data-bs-theme="dark">
+    <Navbar data-bs-theme="dark" expand="lg"> {/* <-- expand hace que sea responsive */}
       <Container>
 
         {/* Logo → clickeable solo si NO estás en admin ni en login */}
@@ -33,31 +33,39 @@ function NavBar() {
           />
         </Link>
 
-        {/* Si NO estoy en /admin NI en /login → menú normal */}
-        {!isAdminRoute && !isLoginRoute && (
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-
-            <NavDropdown title="Servicios" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/alta-monotributo">Alta Monotributo</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/baja-monotributo">Baja Monotributo</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/recategorizacion">Recategorización</NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link as={Link} to='/proceso'>Proceso</Nav.Link>
-            <Nav.Link as={Link} to='/asesoramiento'>Asesoramiento</Nav.Link>
-            <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
-          </Nav>
+        {/* Toggle para pantalla pequeña */}
+        {!isLoginRoute && (
+          <Navbar.Toggle aria-controls="navbar-nav" />
         )}
 
-        {/* Si estoy en /admin → SOLO mostrar Logout */}
-        {isAdminRoute && !isLoginRoute && (
-          <Nav className="ms-auto">
-            <Nav.Link onClick={handleLogout} style={{ cursor: "pointer" }}>
-              Cerrar sesión
-            </Nav.Link>
-          </Nav>
-        )}
+        {/* Contenedor de links que colapsa en pantallas pequeñas */}
+        <Navbar.Collapse id="navbar-nav">
+          {/* Si NO estoy en /admin NI en /login → menú normal */}
+          {!isAdminRoute && !isLoginRoute && (
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to='/home'>Home</Nav.Link>
+
+              <NavDropdown title="Servicios" id="navbarScrollingDropdown">
+                <NavDropdown.Item as={Link} to="/alta-monotributo">Alta Monotributo</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/baja-monotributo">Baja Monotributo</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/recategorizacion">Recategorización</NavDropdown.Item>
+              </NavDropdown>
+
+              <Nav.Link as={Link} to='/proceso'>Proceso</Nav.Link>
+              <Nav.Link as={Link} to='/asesoramiento'>Asesoramiento</Nav.Link>
+              <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
+            </Nav>
+          )}
+
+          {/* Si estoy en /admin → SOLO mostrar Logout */}
+          {isAdminRoute && !isLoginRoute && (
+            <Nav className="ms-auto">
+              <Nav.Link onClick={handleLogout} style={{ cursor: "pointer" }}>
+                Cerrar sesión
+              </Nav.Link>
+            </Nav>
+          )}
+        </Navbar.Collapse>
 
       </Container>
     </Navbar>
