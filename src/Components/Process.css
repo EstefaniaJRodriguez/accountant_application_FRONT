@@ -1,24 +1,51 @@
+.process-wrapper {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+.process-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.process-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .process-card {
-  width: 100%; /* o el ancho que quieras */
+  padding: 30px;
+  border-radius: 18px;
+  border: none;
+  background: white;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
 }
 
-.process-img {
-  width: 100px; /* ancho de la imagen */
-  height: auto; /* mantiene proporción */
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.process-text {
-  flex: 1; /* ocupa el resto del espacio */
-}
-.small-img {
-  max-width: 120px; /* más chica */
+.process-icon img {
+  width: 60px;
   height: auto;
+  margin-bottom: 15px;
 }
 
-.process-section {
-  background-color: #f0f0f0; /* gris claro */
-  padding: 50px 0;          /* espacio arriba y abajo */
+.process-step-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a;
 }
-h4{
-  color:454545
+
+.process-step-text {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-top: 8px;
 }
+
