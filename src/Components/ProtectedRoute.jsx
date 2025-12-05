@@ -1,16 +1,33 @@
-import React from "react";
+// src/routes/ProtectedRoute.jsx
 import { Navigate } from "react-router-dom";
 
-export default function ProtectedRoute({ children, requiredRole }) {
+// Función para validar token y expiración
+const isLoggedIn = () => {
   const token = localStorage.getItem("token");
-  const role = localStorage.getItem("role");
+  if (!token) return false;
 
-  // Si no hay token → al login
-  if (!token) return <Navigate to="/login" />;
+  try {
+    // JWT = header.payload.signature
+    const payload = token.split(".")[1];
+    const decoded = JSON.parse(atob(payload));
 
-  // Si la ruta requiere rol admin → validar
-  if (requiredRole && role !== requiredRole)
-    return <Navigate to="/login" />;
+    // Verificar expiración
+    if (decoded.exp * 1000 < Date.now()) {
+      console.warn("⛔ Token expirado");
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error al verificar token:", error);
+    return false;
+  }
+};
+
+export default function ProtectedRoute({ children }) {
+  if (!isLoggedIn()) {
+    return <Navigate to="/login" replace />;
+  }
 
   return children;
 }
