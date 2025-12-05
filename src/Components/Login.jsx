@@ -37,40 +37,80 @@ export default function Login() {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center min-vh-100">
-      <Card style={{ width: '22rem' }} className="shadow p-3">
+    <div
+      style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #6C63FF, #00C9FF)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '20px'
+      }}
+    >
+      <Card
+        style={{
+          width: '24rem',
+          borderRadius: '18px',
+          boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
+          padding: '10px'
+        }}
+      >
         <Card.Body>
-          <h2 className="text-center mb-4">Panel de Admin</h2>
+          <h2
+            className="text-center mb-4"
+            style={{ fontWeight: '700', color: '#333' }}
+          >
+            Acceso al Sistema
+          </h2>
 
-          {error && <Alert variant="danger">{error}</Alert>}
+          {error && (
+            <Alert variant="danger" className="text-center">
+              {error}
+            </Alert>
+          )}
 
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
-              <Form.Label>Usuario</Form.Label>
+              <Form.Label style={{ fontWeight: '600' }}>Usuario</Form.Label>
               <Form.Control
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                style={{ borderRadius: '10px' }}
               />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Contraseña</Form.Label>
+              <Form.Label style={{ fontWeight: '600' }}>Contraseña</Form.Label>
               <Form.Control
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                style={{ borderRadius: '10px' }}
               />
             </Form.Group>
 
-            <Button type="submit" variant="primary" className="w-100">
+            <Button
+              type="submit"
+              className="w-100"
+              style={{
+                background: '#6C63FF',
+                border: 'none',
+                borderRadius: '10px',
+                padding: '10px',
+                fontWeight: '600',
+                transition: '0.2s'
+              }}
+              onMouseOver={(e) => (e.target.style.background = '#5a54d6')}
+              onMouseOut={(e) => (e.target.style.background = '#6C63FF')}
+            >
               Ingresar
             </Button>
           </Form>
         </Card.Body>
       </Card>
-    </Container>
+    </div>
   );
 }
