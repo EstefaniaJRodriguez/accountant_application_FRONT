@@ -57,10 +57,3 @@ h2{text-align: center;
 .read-the-docs {
   color: #888;
 } */
-.servicios-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 16px; /* antes estaba 40–60px por defecto */
-  margin-top: 20px;
-}
