@@ -58,7 +58,7 @@ export default function Login() {
       >
         <h2 style={{ fontWeight: '700', marginBottom: '10px' }}>Iniciar Sesión</h2>
         <p style={{ color: '#6B7280', marginBottom: '25px' }}>
-          Ingresa tus credenciales para acceder a tu cuenta
+          Ingresa tus credenciales para acceder al panel de Administrador
         </p>
 
         {error && (
@@ -71,7 +71,7 @@ export default function Login() {
           <Form.Group className="mb-3">
             <Form.Label style={{ fontWeight: '600' }}>Correo electrónico</Form.Label>
             <Form.Control
-              type="email"
+              type="text"
               placeholder="tu@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -117,10 +117,6 @@ export default function Login() {
             Iniciar sesión
           </Button>
         </Form>
-
-        <div className="text-center mt-4">
-          <span style={{ color: '#6B7280' }}>© 2024 ContaPlus — Todos los derechos reservados.</span>
-        </div>
       </div>
     </div>
   );
