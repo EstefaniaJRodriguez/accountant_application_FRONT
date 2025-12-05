@@ -1,14 +1,9 @@
 {
-    "headers": {
-      "/index.html": {
-        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
-      },
-      "/assets/*": {
-        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
-      },
-      "/**": {
-        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
-      }
+  "headers": {
+    "/**": {
+      "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
     }
   }
+}
+
   
