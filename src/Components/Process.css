@@ -1,10 +1,10 @@
 /* Contenedor general */
 .process-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
-/* Número */
+/* Número redondo */
 .process-number {
   font-size: 4rem;
   font-weight: 700;
@@ -22,41 +22,36 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Animación del número */
 .process-number:hover {
   transform: scale(1.07);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* Tarjetas */
-.process-card {
-  border-radius: 20px !important;
-  border: none !important;
-  background: white;
-  text-align: center;
-  padding: 30px 20px !important;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.process-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
-}
-
-/* Títulos */
+/* Ajustar espaciado entre título y párrafos */
 .process-card h4 {
   font-weight: 700;
   color: #0d3b66;
-  margin-bottom: 5px;
+  margin-bottom: 8px;   /* antes tenía ~24px */
 }
 
-/* Párrafos */
 .process-card p {
-  color: #633939;
+  color: #5b5b5b;
   font-size: 0.95rem;
-  margin-top: auto;
+  margin-top: 4px;      /* reducimos espacio arriba */
+  margin-bottom: 6px;
+  line-height: 1.4;     /* más compacto */
+}
+
+/* Si querés aún menos espacio general dentro de la card */
+.process-card .card-body {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+/* Efecto hover en la tarjeta */
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
 }
