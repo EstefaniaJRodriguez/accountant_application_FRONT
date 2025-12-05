@@ -27,12 +27,13 @@ function Home({ servicios = [] }) {
     <>
       <Slide />
       <br />
+
       <h2>Nuestros servicios</h2>
       <p>
         Solicitá el servicio que necesites y en un plazo de, aproximadamente 48 hrs, 
         te enviamos la documentación
       </p>
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <div className="servicios-container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
         {servicios.map((s, i) => (
           <Servicio key={i} title={s.title} image={s.image} route={s.route} />
         ))}
