@@ -1,27 +1,25 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
-import './Card.css'
+import './Card.css';
 
-function Servicio({ title, image, route}) {
+function Servicio({ title, image, route }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    if (route) {
-      navigate(route); // redirige a la ruta pasada
-    }
+    if (route) navigate(route);
   };
+
   return (
-    <div>
-      <Card style={{ width: '24rem' }}></Card>
-    <Card style={{ width: '24rem' }}>
-      <Card.Img variant="top" src={image} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Button className='button' onClick={handleClick}>Solicitar</Button>
+    <Card className="servicio-card">
+      <Card.Img className="servicio-img" variant="top" src={image} />
+      <Card.Body className="servicio-body">
+        <Card.Title className="servicio-title">{title}</Card.Title>
+        <Button className="servicio-btn" onClick={handleClick}>
+          Solicitar
+        </Button>
       </Card.Body>
     </Card>
-     </div>
   );
 }
 
