@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Spinner } from 'react-bootstrap';
 
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // Nuevo estado
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+    setLoading(true); // Activar spinner
 
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/login`, {
@@ -22,6 +25,7 @@ export default function Login() {
 
       if (!response.ok) {
         setError(data.message || 'Credenciales incorrectas');
+        setLoading(false); // Desactivar spinner
         return;
       }
 
@@ -33,6 +37,7 @@ export default function Login() {
 
     } catch (err) {
       setError('Error de conexión con el servidor');
+      setLoading(false); // Desactivar spinner
     }
   };
 
@@ -100,6 +105,7 @@ export default function Login() {
 
           <Button
             type="submit"
+            disabled={loading} // Desactivar botón mientras carga
             style={{
               background: '#0A2A5B',
               border: 'none',
@@ -108,11 +114,24 @@ export default function Login() {
               width: '100%',
               fontWeight: '600',
               fontSize: '16px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
             onMouseOver={(e) => (e.target.style.background = '#0C356A')}
             onMouseOut={(e) => (e.target.style.background = '#0A2A5B')}
           >
-            Iniciar sesión
+            {loading ? (
+              <Spinner
+                as="span"
+                animation="border"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                style={{ marginRight: '8px' }}
+              />
+            ) : null}
+            {loading ? 'Ingresando...' : 'Iniciar sesión'}
           </Button>
         </Form>
       </div>
