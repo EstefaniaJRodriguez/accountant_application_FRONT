@@ -1,76 +1,56 @@
-.process-wrapper {
-  padding: 60px 0;
-  background: #f8fafc;
+/* Contenedor general */
+.process-container {
+  max-width: 1100px;
+  margin: auto;
 }
 
-.process-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.process-subtitle {
-  font-size: 1.1rem;
-  color: #64748b;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.process-card {
-  padding: 30px;
-  border-radius: 18px;
-  border: none;
-  background: white;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%;
-}
-
-.process-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.process-icon img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.process-step-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #0f172a;
-}
-
-.process-step-text {
-  font-size: 0.95rem;
-  color: #475569;
-  margin-top: 8px;
-}
+/* Número redondo */
 .process-number {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 700;
-  color: #0a2a57;
-  width: 80px;            /* mismo ancho para todos */
-  height: 80px;           /* opcional: cuadrado perfecto */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 10px;   /* centrar y dejar espacio abajo */
-  line-height: 1;        /* evita que se mueva verticalmente */
-}
-.process-number {
-  font-size: 4.2rem;
-  font-weight: 700;
-  color: #0a2a57;
+  color: #0d3b66;
   width: 95px;
   height: 95px;
   border-radius: 50%;
-  background: #e8eff8;
+  background: #e8f0fb;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 15px;
+  margin: 0 auto 20px;
+  line-height: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Animación del número */
+.process-number:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Tarjetas */
+.process-card {
+  border-radius: 20px !important;
+  border: none !important;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la tarjeta */
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* Títulos */
+.process-card h4 {
+  font-weight: 700;
+  color: #0d3b66;
+}
+
+/* Párrafos */
+.process-card p {
+  color: #5b5b5b;
+  font-size: 0.95rem;
+}
