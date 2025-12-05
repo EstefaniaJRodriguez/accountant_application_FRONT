@@ -48,7 +48,7 @@ export default function Login() {
             <Form.Group className="mb-3">
               <Form.Label>Usuario</Form.Label>
               <Form.Control
-                type="email"
+                type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
