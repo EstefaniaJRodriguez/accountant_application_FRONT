@@ -17,46 +17,42 @@ function Process() {
       </p>
 
       <Container>
+        <Row className="justify-content-center text-center">
 
-        {/* PASO 1 */}
-        <Row className="justify-content-center mb-5">
-          <Col xs={12} md={4}>
+          {/* PASO 1 */}
+          <Col xs={12} md={4} className="mb-4">
             <div className="process-number">1</div>
-            <Card className="p-4 process-card">
+            <Card className="process-card">
               <h4>Seleccioná tu servicio</h4>
               <p>
                 Elegí el servicio contable que mejor se adapte a tus necesidades: monotributo, asesoría fiscal, liquidación de sueldos y más.
               </p>
             </Card>
           </Col>
-        </Row>
 
-        {/* PASO 2 */}
-        <Row className="justify-content-center mb-5">
-          <Col xs={12} md={4}>
+          {/* PASO 2 */}
+          <Col xs={12} md={4} className="mb-4">
             <div className="process-number">2</div>
-            <Card className="p-4 process-card">
+            <Card className="process-card">
               <h4>Realizá el pago</h4>
               <p>
                 Aboná de forma rápida y segura a través de Mercado Pago. Recibirás confirmación inmediata.
               </p>
             </Card>
           </Col>
-        </Row>
 
-        {/* PASO 3 */}
-        <Row className="justify-content-center mb-5">
-          <Col xs={12} md={4}>
+          {/* PASO 3 */}
+          <Col xs={12} md={4} className="mb-4">
             <div className="process-number">3</div>
-            <Card className="p-4 process-card">
+            <Card className="process-card">
               <h4>Te contactamos</h4>
               <p>
                 En un plazo aproximado de 48 horas, un profesional se comunicará con vos para continuar el proceso o enviarte la documentación final.
               </p>
             </Card>
           </Col>
-        </Row>
 
+        </Row>
       </Container>
     </div>
   );
