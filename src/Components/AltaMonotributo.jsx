@@ -144,7 +144,7 @@ function AltaMonotributoForm() {
     }
   };
 
-  const total = precioTramite + (sinCuit ? 5000 : 0);
+  const total = Number(precioTramite) + Number(precioGestionExtra);
 
   return (
     <section className="py-5 bg-light">
@@ -187,20 +187,21 @@ function AltaMonotributoForm() {
           </Form.Group>
 
           {/* CHECKBOX SIN CUIT */}
-          <Form.Group className="mb-3">
-            <Form.Check
-              type="checkbox"
-              label="No tengo CUIT"
-              checked={sinCuit}
-              onChange={(e) => {
-                setSinCuit(e.target.checked);
-                setPrecioGestionExtra(e.target.checked ? 5000 : 0);
-                if (e.target.checked) {
-                  handleChange({ target: { name: "cuit", value: "" } });
-                }
-              }}
-            />
-          </Form.Group>
+          <Form.Check
+  type="checkbox"
+  label="No tengo CUIT"
+  checked={sinCuit}
+  onChange={(e) => {
+    const checked = e.target.checked;
+    setSinCuit(checked);
+    setPrecioGestionExtra(checked ? 5000 : 0);
+
+    if (checked) {
+      handleChange({ target: { name: "cuit", value: "" } });
+    }
+  }}
+/>
+
 
           {sinCuit && (
             <Form.Text className="text mb-3 d-block">
@@ -451,9 +452,10 @@ function AltaMonotributoForm() {
 
           {/* MONTO TOTAL */}
           <div className="text-center mt-4">
-            <p className="fw-bold">Monto trámite: ${precioTramite}</p>
-            <p className="fw-bold">Gestión extra: ${precioGestionExtra}</p>
-            <p className="fw-bold">Total a pagar: ${total.toLocaleString("es-AR")}</p>
+          <p className="fw-bold">Monto trámite: ${precioTramite}</p>
+<p className="fw-bold">Gestión extra: ${precioGestionExtra}</p>
+<p className="fw-bold">Total a pagar: ${total.toLocaleString("es-AR")}</p>
+
 
             <Button variant="primary" className="button" type="submit" disabled={loading}>
               Enviar formulario y pagar
