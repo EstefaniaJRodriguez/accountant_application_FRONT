@@ -28,7 +28,7 @@ const SolicitudesGrid = () => {
       if (debouncedCuit) params.append("cuit", debouncedCuit);
       if (debouncedEmail) params.append("email", debouncedEmail);
 
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin?${params.toString()}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/solicitudes?${params.toString()}`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         }
