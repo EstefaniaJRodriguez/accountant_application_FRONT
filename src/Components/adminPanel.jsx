@@ -164,8 +164,8 @@ const SolicitudesGrid = () => {
         onSelect={(k) => setTabActiva(k)}
         className="mb-4"
       >
-        <Tab eventKey="procesados" title="✅ Procesados" />
-        <Tab eventKey="no_procesados" title="⏳ No procesados" />
+        <Tab eventKey="procesados" title="✅ Pagos Procesados" />
+        <Tab eventKey="no_procesados" title="⏳ Pagos No procesados" />
       </Tabs>
 
       {/* 🔹 Filtros */}
