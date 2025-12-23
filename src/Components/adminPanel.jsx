@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Button, Modal, Form } from "react-bootstrap";
+import { Table, Button, Modal, Form, Tabs, Tab } from "react-bootstrap";
 import { Plus } from "lucide-react";
 
 const getToken = () => localStorage.getItem("token");
@@ -14,8 +14,8 @@ const SolicitudesGrid = () => {
   const [filtroCuit, setFiltroCuit] = useState("");
   const [filtroEmail, setFiltroEmail] = useState("");
 
-  // 🔹 NUEVO → estado de pago (por defecto Y, como ahora)
-  const [filtroPago, setFiltroPago] = useState("Y");
+  // 🔹 NUEVO → tab activa
+  const [tabActiva, setTabActiva] = useState("procesados");
 
   const [debouncedCuit, setDebouncedCuit] = useState("");
   const [debouncedEmail, setDebouncedEmail] = useState("");
@@ -23,7 +23,7 @@ const SolicitudesGrid = () => {
   const [showModal, setShowModal] = useState(false);
   const [solicitudSeleccionada, setSolicitudSeleccionada] = useState(null);
 
-  // 🔹 Cargar solicitudes con filtros
+  // 🔹 Cargar solicitudes
   const fetchSolicitudes = async () => {
     try {
       const params = new URLSearchParams();
@@ -33,26 +33,21 @@ const SolicitudesGrid = () => {
       if (debouncedCuit) params.append("cuit", debouncedCuit);
       if (debouncedEmail) params.append("email", debouncedEmail);
 
-      // 🔹 NUEVO → estado_pago
-      if (filtroPago) params.append("estado_pago", filtroPago);
+      // 🔹 estado_pago según tab
+      params.append(
+        "estado_pago",
+        tabActiva === "procesados" ? "Y" : "N"
+      );
 
       const res = await fetch(
         `${import.meta.env.VITE_API_URL}/api/admin?${params.toString()}`,
         {
-          headers: {
-            Authorization: `Bearer ${getToken()}`,
-          },
+          headers: { Authorization: `Bearer ${getToken()}` },
         }
       );
 
       const data = await res.json();
-
-      if (Array.isArray(data)) {
-        setSolicitudes(data);
-      } else {
-        console.error("La respuesta no es un array:", data);
-        setSolicitudes([]);
-      }
+      setSolicitudes(Array.isArray(data) ? data : []);
     } catch (error) {
       console.error("Error al cargar solicitudes:", error);
     }
@@ -81,13 +76,13 @@ const SolicitudesGrid = () => {
     fetchSolicitudes();
   }, []);
 
-  // 🔹 Refrescar con filtros
+  // 🔹 Refrescar cuando cambian filtros o tabs
   useEffect(() => {
     fetchSolicitudes();
   }, [
+    tabActiva,
     filtroEstado,
     filtroTramite,
-    filtroPago,
     debouncedCuit,
     debouncedEmail,
   ]);
@@ -163,22 +158,18 @@ const SolicitudesGrid = () => {
     <div className="p-4">
       <h2 className="mb-3">Panel de Solicitudes</h2>
 
+      {/* 🔹 Tabs */}
+      <Tabs
+        activeKey={tabActiva}
+        onSelect={(k) => setTabActiva(k)}
+        className="mb-4"
+      >
+        <Tab eventKey="procesados" title="✅ Procesados" />
+        <Tab eventKey="no_procesados" title="⏳ No procesados" />
+      </Tabs>
+
       {/* 🔹 Filtros */}
       <div className="d-flex gap-3 mb-3 flex-wrap align-items-end">
-
-        {/* NUEVO filtro pago */}
-        <Form.Group>
-          <Form.Label>Pago</Form.Label>
-          <Form.Select
-            value={filtroPago}
-            onChange={(e) => setFiltroPago(e.target.value)}
-          >
-            <option value="">Todos</option>
-            <option value="Y">Pagados</option>
-            <option value="N">Pendientes</option>
-          </Form.Select>
-        </Form.Group>
-
         <Form.Group>
           <Form.Label>Tipo</Form.Label>
           <Form.Select
@@ -260,7 +251,7 @@ const SolicitudesGrid = () => {
         </tbody>
       </Table>
 
-      {/* 🔹 Modal (sin cambios funcionales) */}
+      {/* 🔹 Modal */}
       <Modal show={showModal} onHide={cerrarModal} centered size="lg">
         <Modal.Header closeButton>
           <Modal.Title>Detalle de Solicitud</Modal.Title>
