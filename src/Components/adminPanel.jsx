@@ -14,7 +14,6 @@ const SolicitudesGrid = () => {
   const [filtroCuit, setFiltroCuit] = useState("");
   const [filtroEmail, setFiltroEmail] = useState("");
 
-  // 🔹 NUEVO → tab activa
   const [tabActiva, setTabActiva] = useState("procesados");
 
   const [debouncedCuit, setDebouncedCuit] = useState("");
@@ -23,7 +22,6 @@ const SolicitudesGrid = () => {
   const [showModal, setShowModal] = useState(false);
   const [solicitudSeleccionada, setSolicitudSeleccionada] = useState(null);
 
-  // 🔹 Cargar solicitudes
   const fetchSolicitudes = async () => {
     try {
       const params = new URLSearchParams();
@@ -33,7 +31,6 @@ const SolicitudesGrid = () => {
       if (debouncedCuit) params.append("cuit", debouncedCuit);
       if (debouncedEmail) params.append("email", debouncedEmail);
 
-      // 🔹 estado_pago según tab
       params.append(
         "estado_pago",
         tabActiva === "procesados" ? "Y" : "N"
@@ -41,9 +38,7 @@ const SolicitudesGrid = () => {
 
       const res = await fetch(
         `${import.meta.env.VITE_API_URL}/api/admin?${params.toString()}`,
-        {
-          headers: { Authorization: `Bearer ${getToken()}` },
-        }
+        { headers: { Authorization: `Bearer ${getToken()}` } }
       );
 
       const data = await res.json();
@@ -53,7 +48,6 @@ const SolicitudesGrid = () => {
     }
   };
 
-  // 🔹 Estados y tipos
   useEffect(() => {
     const fetchEstados = async () => {
       const res = await fetch(
@@ -76,7 +70,6 @@ const SolicitudesGrid = () => {
     fetchSolicitudes();
   }, []);
 
-  // 🔹 Refrescar cuando cambian filtros o tabs
   useEffect(() => {
     fetchSolicitudes();
   }, [
@@ -87,7 +80,6 @@ const SolicitudesGrid = () => {
     debouncedEmail,
   ]);
 
-  // 🔹 Debounce
   useEffect(() => {
     const t = setTimeout(() => setDebouncedCuit(filtroCuit), 500);
     return () => clearTimeout(t);
@@ -158,7 +150,6 @@ const SolicitudesGrid = () => {
     <div className="p-4">
       <h2 className="mb-3">Panel de Solicitudes</h2>
 
-      {/* 🔹 Tabs */}
       <Tabs
         activeKey={tabActiva}
         onSelect={(k) => setTabActiva(k)}
@@ -168,56 +159,6 @@ const SolicitudesGrid = () => {
         <Tab eventKey="no_procesados" title="⏳ Pagos No procesados" />
       </Tabs>
 
-      {/* 🔹 Filtros */}
-      <div className="d-flex gap-3 mb-3 flex-wrap align-items-end">
-        <Form.Group>
-          <Form.Label>Tipo</Form.Label>
-          <Form.Select
-            value={filtroTramite}
-            onChange={(e) => setFiltroTramite(e.target.value)}
-          >
-            <option value="">Todos</option>
-            {tiposTramite.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.tramite}
-              </option>
-            ))}
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>Estado</Form.Label>
-          <Form.Select
-            value={filtroEstado}
-            onChange={(e) => setFiltroEstado(e.target.value)}
-          >
-            <option value="">Todos</option>
-            {estados.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.nombre}
-              </option>
-            ))}
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>CUIT</Form.Label>
-          <Form.Control
-            value={filtroCuit}
-            onChange={(e) => setFiltroCuit(e.target.value)}
-          />
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            value={filtroEmail}
-            onChange={(e) => setFiltroEmail(e.target.value)}
-          />
-        </Form.Group>
-      </div>
-
-      {/* 🔹 Tabla */}
       <Table striped bordered hover responsive>
         <thead>
           <tr>
@@ -251,7 +192,7 @@ const SolicitudesGrid = () => {
         </tbody>
       </Table>
 
-      {/* 🔹 Modal */}
+      {/* 🔹 Modal con descripción completa */}
       <Modal show={showModal} onHide={cerrarModal} centered size="lg">
         <Modal.Header closeButton>
           <Modal.Title>Detalle de Solicitud</Modal.Title>
@@ -259,10 +200,21 @@ const SolicitudesGrid = () => {
         <Modal.Body>
           {solicitudSeleccionada && (
             <>
-              <p>
-                <strong>Trámite:</strong>{" "}
-                {solicitudSeleccionada.tipo_tramite_nombre}
-              </p>
+              <p><strong>Trámite:</strong> {solicitudSeleccionada.tipo_tramite_nombre}</p>
+              <p><strong>Nombre:</strong> {solicitudSeleccionada.datos?.nombre}</p>
+              <p><strong>Email:</strong> {solicitudSeleccionada.datos?.mail}</p>
+              <p><strong>CUIT:</strong> {solicitudSeleccionada.datos?.cuit}</p>
+
+              <hr />
+
+              {Object.entries(solicitudSeleccionada.datos || {}).map(
+                ([key, value]) =>
+                  !["nombre", "mail", "cuit"].includes(key) && (
+                    <p key={key}>
+                      <strong>{key}:</strong> {String(value)}
+                    </p>
+                  )
+              )}
 
               <Form.Group className="mt-3">
                 <Form.Label>Estado</Form.Label>
@@ -291,9 +243,7 @@ const SolicitudesGrid = () => {
                 <Form.Control
                   as="textarea"
                   rows={3}
-                  value={
-                    solicitudSeleccionada.observaciones || ""
-                  }
+                  value={solicitudSeleccionada.observaciones || ""}
                   onChange={(e) =>
                     setSolicitudSeleccionada((prev) => ({
                       ...prev,
