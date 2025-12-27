@@ -192,7 +192,7 @@ const SolicitudesGrid = () => {
         </tbody>
       </Table>
 
-      {/* 🔹 Modal con descripción completa */}
+      {/* 🔹 Modal con detalle por tipo de trámite */}
       <Modal show={showModal} onHide={cerrarModal} centered size="lg">
         <Modal.Header closeButton>
           <Modal.Title>Detalle de Solicitud</Modal.Title>
@@ -200,20 +200,57 @@ const SolicitudesGrid = () => {
         <Modal.Body>
           {solicitudSeleccionada && (
             <>
-              <p><strong>Trámite:</strong> {solicitudSeleccionada.tipo_tramite_nombre}</p>
-              <p><strong>Nombre:</strong> {solicitudSeleccionada.datos?.nombre}</p>
-              <p><strong>Email:</strong> {solicitudSeleccionada.datos?.mail}</p>
-              <p><strong>CUIT:</strong> {solicitudSeleccionada.datos?.cuit}</p>
-
+              <p>
+                <strong>Tipo de Trámite:</strong>{" "}
+                {solicitudSeleccionada.tipo_tramite_nombre}
+              </p>
               <hr />
 
-              {Object.entries(solicitudSeleccionada.datos || {}).map(
-                ([key, value]) =>
-                  !["nombre", "mail", "cuit"].includes(key) && (
-                    <p key={key}>
-                      <strong>{key}:</strong> {String(value)}
-                    </p>
-                  )
+              {/* 🔸 Alta Monotributo */}
+              {solicitudSeleccionada.tipo_tramite_nombre === "Alta Monotributo" && (
+                <>
+                  <p><strong>Nombre completo:</strong> {solicitudSeleccionada.datos?.nombre}</p>
+                  <p><strong>Mail:</strong> {solicitudSeleccionada.datos?.mail}</p>
+                  <p><strong>CUIT:</strong> {solicitudSeleccionada.datos?.cuit}</p>
+                  <p><strong>Calle:</strong> {solicitudSeleccionada.datos?.calle}</p>
+                  <p><strong>Número:</strong> {solicitudSeleccionada.datos?.numero}</p>
+                  <p><strong>Ingresos:</strong> {solicitudSeleccionada.datos?.ingresos}</p>
+                  <p><strong>Servicio:</strong> {solicitudSeleccionada.datos?.servicio}</p>
+                  <p><strong>Teléfono:</strong> {solicitudSeleccionada.datos?.telefono}</p>
+                  <p><strong>Actividad:</strong> {solicitudSeleccionada.datos?.actividad}</p>
+                  <p><strong>Provincia:</strong> {solicitudSeleccionada.datos?.provincia}</p>
+                  <p><strong>Clave Fiscal:</strong> {solicitudSeleccionada.datos?.claveFiscal}</p>
+                  <p><strong>Tipo de Ingreso:</strong> {solicitudSeleccionada.datos?.tipoIngreso}</p>
+                  <p><strong>Otros Ingresos:</strong> {solicitudSeleccionada.datos?.otrosIngresos}</p>
+                  <p><strong>Categoría Deseada:</strong> {solicitudSeleccionada.datos?.categoriaDeseada}</p>
+                </>
+              )}
+
+              {/* 🔸 Baja Monotributo */}
+              {solicitudSeleccionada.tipo_tramite_nombre === "Baja Monotributo" && (
+                <>
+                  <p><strong>Nombre completo:</strong> {solicitudSeleccionada.datos?.nombre}</p>
+                  <p><strong>Mail:</strong> {solicitudSeleccionada.datos?.mail}</p>
+                  <p><strong>CUIT:</strong> {solicitudSeleccionada.datos?.cuit}</p>
+                  <p><strong>Mes de Baja:</strong> {solicitudSeleccionada.datos?.mesBaja}</p>
+                  <p><strong>Teléfono:</strong> {solicitudSeleccionada.datos?.telefono}</p>
+                  <p><strong>Domicilio:</strong> {solicitudSeleccionada.datos?.domicilio}</p>
+                  <p><strong>Clave Fiscal:</strong> {solicitudSeleccionada.datos?.claveFiscal}</p>
+                </>
+              )}
+
+              {/* 🔸 Recategorización */}
+              {solicitudSeleccionada.tipo_tramite_nombre === "Recategorización" && (
+                <>
+                  <p><strong>Nombre completo:</strong> {solicitudSeleccionada.datos?.nombre}</p>
+                  <p><strong>Mail:</strong> {solicitudSeleccionada.datos?.mail}</p>
+                  <p><strong>CUIT:</strong> {solicitudSeleccionada.datos?.cuit}</p>
+                  <p><strong>Teléfono:</strong> {solicitudSeleccionada.datos?.telefono}</p>
+                  <p><strong>Domicilio:</strong> {solicitudSeleccionada.datos?.domicilio}</p>
+                  <p><strong>Clave Fiscal:</strong> {solicitudSeleccionada.datos?.clave_fiscal}</p>
+                  <p><strong>Categoría Deseada:</strong> {solicitudSeleccionada.datos?.categoriaDeseada}</p>
+                  <p><strong>Ingresos últimos 12 meses:</strong> {solicitudSeleccionada.datos?.ingresosUltimos12meses}</p>
+                </>
               )}
 
               <Form.Group className="mt-3">
