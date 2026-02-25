@@ -19,6 +19,8 @@ const SolicitudesGrid = () => {
   const [debouncedCuit, setDebouncedCuit] = useState("");
   const [debouncedEmail, setDebouncedEmail] = useState("");
 
+  const [filtroPago, setFiltroPago] = useState("Y");
+
   const [showModal, setShowModal] = useState(false);
   const [solicitudSeleccionada, setSolicitudSeleccionada] = useState(null);
 
@@ -149,6 +151,69 @@ const SolicitudesGrid = () => {
   return (
     <div className="p-4">
       <h2 className="mb-3">Panel de Solicitudes</h2>
+
+
+
+{/* 🔹 Filtros */}
+<div className="d-flex gap-3 mb-3 flex-wrap align-items-end">
+
+        {/* NUEVO filtro pago */}
+
+        <Form.Group className="d-flex align-items-center gap-2">
+        <Form.Label className="m-0"> Tramite</Form.Label>
+               <Form.Select
+  value={filtroTramite}
+  onChange={(e) => setFiltroTramite(e.target.value)}
+>
+  <option value="">Todos</option>
+  {tiposTramite.map((tipo) => (
+    <option key={tipo.id} value={tipo.id}>
+      {tipo.tramite}
+    </option>
+  ))}
+</Form.Select>
+</Form.Group>
+
+<Form.Group className="d-flex align-items-center gap-2">
+<Form.Label className="m-0">Estado</Form.Label>
+<Form.Select
+  value={filtroEstado}
+  onChange={(e) => setFiltroEstado(e.target.value)}
+>
+  <option value="">Todos</option>
+  {estados.map((estado) => (
+    <option key={estado.id} value={estado.id}>
+      {estado.nombre}
+    </option>
+  ))}
+</Form.Select>
+</Form.Group>
+
+
+      <Form.Group className="d-flex align-items-center gap-2">
+  <Form.Label className="m-0">CUIT/CUIL:</Form.Label>
+  <Form.Control
+    type="text"
+    placeholder="Buscar por CUIT/CUIL"
+    value={filtroCuit}
+    onChange={(e) => setFiltroCuit(e.target.value)}
+  />
+</Form.Group>
+
+
+<Form.Group className="d-flex align-items-center gap-2">
+  <Form.Label className="m-0">Email:</Form.Label>
+  <Form.Control
+    type="text"
+    placeholder="Buscar por Email"
+    value={filtroEmail}
+    onChange={(e) => setFiltroEmail(e.target.value)}
+  />
+</Form.Group>
+
+
+</div>
+
 
       <Tabs
         activeKey={tabActiva}
@@ -307,6 +372,7 @@ const SolicitudesGrid = () => {
         </Modal.Footer>
       </Modal>
     </div>
+
   );
 };
 
