@@ -180,15 +180,13 @@ const PagoExitoso = () => {
         const data = await res.json();
        // console.log("💾 Pago guardado:", data);
 
-       const montoReal = data?.monto || monto;
-
         // 2️⃣ Evento de compra para Google Tag Manager
         if (status === "approved" && window.dataLayer) {
           window.dataLayer.push({
             event: "purchase",
             ecommerce: {
               transaction_id: paymentId,
-              value: montoReal,
+              value: monto,
               currency: "ARS",
               items: [
                 {
@@ -234,7 +232,7 @@ const PagoExitoso = () => {
       <ul>
         <li><strong>Payment ID:</strong> {paymentId}</li>
         <li><strong>Status:</strong> {status}</li>
-        <li><strong>Monto:</strong> {montoReal} ARS</li>
+        {/* <li><strong>Monto:</strong> {monto} ARS</li> */}
         <li><strong>Trámite:</strong> {tipoTramiteNombre}</li>
       </ul>
 
