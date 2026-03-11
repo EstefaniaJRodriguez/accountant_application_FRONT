@@ -181,25 +181,25 @@ const PagoExitoso = () => {
        // console.log("💾 Pago guardado:", data);
 
         // 2️⃣ Evento de compra para Google Tag Manager
-        // if (status === "approved" && window.dataLayer) {
-        //   window.dataLayer.push({
-        //     event: "purchase",
-        //     ecommerce: {
-        //       transaction_id: paymentId,
-        //       value: monto,
-        //       currency: "ARS",
-        //       items: [
-        //         {
-        //           item_id: tramiteId,
-        //           item_name: tipoTramiteNombre,
-        //           quantity: 1,
-        //           payment_method: "Mercado Pago",
-        //         },
-        //       ],
-        //     },
-        //   });
-        //   console.log("📊 Evento de compra enviado a dataLayer");
-        // }
+        if (status === "approved" && window.dataLayer) {
+          window.dataLayer.push({
+            event: "purchase",
+            ecommerce: {
+              transaction_id: paymentId,
+              value: monto,
+              currency: "ARS",
+              items: [
+                {
+                  item_id: tramiteId,
+                  item_name: tipoTramiteNombre,
+                  quantity: 1,
+                  payment_method: "Mercado Pago",
+                },
+              ],
+            },
+          });
+          console.log("📊 Evento de compra enviado a dataLayer");
+        }
 
         yaGuardado.current = true;
         localStorage.setItem(pagoGuardadoKey, "true");
